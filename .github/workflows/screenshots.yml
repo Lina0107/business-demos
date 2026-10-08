@@ -1,0 +1,26 @@
+name: Demo screenshots
+on:
+  push:
+    branches: [main]
+    paths: ['demos/**', 'scripts/**', '.github/workflows/screenshots.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/screenshots.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-screenshots
+          path: screenshots/
+          if-no-files-found: error
+          retention-days: 30
