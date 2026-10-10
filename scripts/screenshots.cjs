@@ -10,7 +10,7 @@ const { pathToFileURL } = require('node:url');
   const file = path.resolve('demos', slug, 'index.html');
   const out = path.join('screenshots', slug);
   await fs.mkdir(out, {recursive:true});
-  const page = await browser.newPage({viewport:{width:1280,height:960},deviceScaleFactor:1,reducedMotion:'reduce'});
+  const page = await browser.newPage({viewport:{width:1280,height:slug === 'ags' ? 856 : 960},deviceScaleFactor:1,reducedMotion:'reduce'});
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
   await page.goto(pathToFileURL(file).href);
