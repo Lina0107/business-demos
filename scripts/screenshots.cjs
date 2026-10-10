@@ -16,7 +16,7 @@ const { pathToFileURL } = require('node:url');
   await page.goto(pathToFileURL(file).href);
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({path:path.join(out,'01-desktop.png')});
-  const section = page.locator('#request');
+  const section = page.locator(slug === 'ags' ? '#services' : '#request');
   await section.screenshot({path:path.join(out,'02-request.png')});
   await page.setViewportSize({width:390,height:844});
   await page.evaluate(() => window.scrollTo(0,0));
