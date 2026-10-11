@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-11",
+  "completed": [
+    {"name":"Ишеевские торты","slug":"cakes","status":"демо готово","screenshots":3,"recipient":"https://wa.me/79876362455","sent":false,"reason":"WhatsApp tool unavailable; earlier manual recipient list unknown"},
+    {"name":"Арт-ателье Ирины Благовой","slug":"atelier","status":"демо готово","screenshots":3,"recipient":"https://wa.me/79093569167","sent":false,"reason":"WhatsApp tool unavailable; earlier manual recipient list unknown"},
+    {"name":"Март","slug":"mart","status":"демо готово — переработка страницы-конструктора","screenshots":3,"recipient":"https://wa.me/79093570011","sent":false,"reason":"WhatsApp tool unavailable; earlier manual recipient list unknown"}
+  ],
+  "github_run": 38114017520,
+  "artifact": 11692482597,
+  "new_candidates": 0,
+  "sent": 0
+}
