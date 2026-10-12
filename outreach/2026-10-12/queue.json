@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-12",
+  "completed": 6,
+  "target": 10,
+  "sent": 0,
+  "reason_not_sent": "Кандидаты из прежней очереди могли входить в 10 неидентифицированных ручных отправок пользователя; автоматическая отправка остановлена во избежание дублей. Для Kurs и Stay есть только каналы, а не подтверждённые чаты.",
+  "items": [
+    {
+      "slug": "kurs",
+      "business": "Курс / Vet Get",
+      "status": "демо готово",
+      "recipient": "Telegram-канал https://t.me/vet_get (не подтверждён как чат); VK https://vk.com/vetget",
+      "outreach": "готово, отправка не выполнена",
+      "sent": false,
+      "files": [
+        "kurs/01-first-screen.png",
+        "kurs/02-useful-section.png",
+        "kurs/03-mobile.png",
+        "kurs/index.html",
+        "kurs/message.txt",
+        "kurs/verification.json"
+      ]
+    },
+    {
+      "slug": "panamera",
+      "business": "Счастливые люди Анны Пономаревой",
+      "status": "демо готово",
+      "recipient": "WhatsApp https://wa.me/79176333366",
+      "outreach": "готово, не отправлено из-за риска дубля",
+      "sent": false,
+      "files": [
+        "panamera/01-first-screen.png",
+        "panamera/02-useful-section.png",
+        "panamera/03-mobile.png",
+        "panamera/index.html",
+        "panamera/message.txt",
+        "panamera/verification.json"
+      ]
+    },
+    {
+      "slug": "groom",
+      "business": "Студия груминга на 1-м пер. Маяковского",
+      "status": "демо готово",
+      "recipient": "WhatsApp https://wa.me/79372732762; Telegram-чат https://t.me/+79372732762",
+      "outreach": "готово, не отправлено из-за риска дубля",
+      "sent": false,
+      "files": [
+        "groom/01-first-screen.png",
+        "groom/02-useful-section.png",
+        "groom/03-mobile.png",
+        "groom/index.html",
+        "groom/message.txt",
+        "groom/verification.json"
+      ]
+    },
+    {
+      "slug": "batonov",
+      "business": "Батонов",
+      "status": "демо готово",
+      "recipient": "WhatsApp https://wa.me/79935834901",
+      "outreach": "готово, не отправлено из-за риска дубля",
+      "sent": false,
+      "files": [
+        "batonov/01-first-screen.png",
+        "batonov/02-useful-section.png",
+        "batonov/03-mobile.png",
+        "batonov/index.html",
+        "batonov/message.txt",
+        "batonov/verification.json"
+      ]
+    },
+    {
+      "slug": "pekatoria",
+      "business": "Пекатория, Гончарова 13А",
+      "status": "демо готово",
+      "recipient": "WhatsApp https://wa.me/79876339768; VK https://vk.com/pekatoria",
+      "outreach": "готово, не отправлено; возможный исторический домен требует подтверждения",
+      "sent": false,
+      "files": [
+        "pekatoria/01-first-screen.png",
+        "pekatoria/02-useful-section.png",
+        "pekatoria/03-mobile.png",
+        "pekatoria/index.html",
+        "pekatoria/message.txt",
+        "pekatoria/verification.json"
+      ]
+    },
+    {
+      "slug": "stay",
+      "business": "Stay Coffee",
+      "status": "демо готово",
+      "recipient": "Telegram-канал https://t.me/staycoffee73 (не подтверждён как чат)",
+      "outreach": "готово, отправка не выполнена",
+      "sent": false,
+      "files": [
+        "stay/01-first-screen.png",
+        "stay/02-useful-section.png",
+        "stay/03-mobile.png",
+        "stay/index.html",
+        "stay/message.txt",
+        "stay/verification.json"
+      ]
+    }
+  ]
+}
