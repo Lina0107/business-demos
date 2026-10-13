@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-13",
+  "additional_sent": 0,
+  "existing_sent_log": "sent-atelier.json",
+  "new_research": [
+    {
+      "business": "Апельсин — сервисный центр",
+      "address": "Рябикова 75",
+      "email": "shebeko73@mail.ru",
+      "whatsapp": "+79084808520",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001040599495",
+      "rating": 3.3,
+      "ratings_count": 28,
+      "website": "Отдельный сайт не найден при проверке названия, адреса и email. Соцсети не найдены.",
+      "status": "резерв: требуется дополнительное подтверждение актуальности и самостоятельного бренда; демо не создано",
+      "benefit": "Подбор запчасти по модели и описание неисправности до визита. Уточнение цены диагностики.",
+      "caution": "Не путать с одноименным ТЦ и STR-Service на том же адресе."
+    },
+    {
+      "business": "Евгения — ателье",
+      "address": "Авиастроителей 17",
+      "phone": "+78422206794",
+      "email_candidate": "toskain@mail.ru",
+      "email_status": "Справочники 2016/2020, официальное актуальное подтверждение отсутствует",
+      "map": "https://yandex.com/maps/org/atelye_yevgeniya/1080289988/",
+      "rating": 3.7,
+      "ratings_count": 11,
+      "status": "резерв; отдельный сайт не найден, соцсети не подтверждены; демо не создано"
+    }
+  ],
+  "excluded": [
+    {
+      "business": "СКРИН",
+      "website": "screen73.ru"
+    },
+    {
+      "business": "HomeClean",
+      "website": "homeclean.su"
+    },
+    {
+      "business": "ЭЛЕМ",
+      "website": "https://elemmebel.wixsite.com/elemmebel/kontakty-magazin-atelye-furnitura",
+      "reason": "Existing builder website; not absent"
+    },
+    {
+      "business": "Ваш портной",
+      "website": "https://vikaziya.nethouse.ru/",
+      "reason": "Existing builder website; not absent"
+    }
+  ],
+  "existing_queue_updates": [
+    {
+      "business": "Март",
+      "owner": "Наталья Мартынова",
+      "owner_source": "https://uldelo.ru/articles/2022/07/28/b-dusha-doma-b--tekstil",
+      "email_status": "Not found; no guessed personal email"
+    },
+    {
+      "business": "AGS Detailing",
+      "exclude_false_match": "ags-uln.ru belongs to Автогазсервис; not detailing",
+      "email_status": "agsulsk@gmail.com remains directory-only"
+    },
+    {
+      "business": "Apple Tree",
+      "email_status": "elephant-studio@mail.ru remains ambiguous association with Elephant; not sent"
+    }
+  ]
+}
