@@ -1,0 +1,28 @@
+{
+  "confirmed_at": "2026-10-13T15:44:57+04:00",
+  "user_statement": "те что ты ежедневно делаешь не отправляла никому еще",
+  "scope": "All daily demo batches; not the initial manually contacted batch",
+  "manual_contact": false,
+  "remaining_unsent_slugs": [
+    "ags",
+    "groomart",
+    "cakes",
+    "mart",
+    "kurs",
+    "panamera",
+    "groom",
+    "batonov",
+    "pekatoria",
+    "stay",
+    "appletree",
+    "goldenpier",
+    "diana-curtains"
+  ],
+  "exception": {
+    "slug": "atelier",
+    "status": "sent_by_assistant",
+    "message_id": "1a1350e8d99e8a8a"
+  },
+  "effect": "Remove unknown manual recipient blocker for daily queue. Still verify recipient, demo quality and send history. Do not ask again whether user sent daily demos.",
+  "initial_batch": "Earlier manually contacted initial businesses remain excluded."
+}
