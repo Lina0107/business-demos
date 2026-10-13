@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-13",
+  "sent": [],
+  "ready": [
+    {"business":"Apple Tree Pre School","slug":"appletree","status":"на утверждении","channel":"WhatsApp","recipient":"https://wa.me/79297950231","site_status":"страница-конструктор Яндекса; отдельный сайт не найден"},
+    {"business":"Золотой причал","slug":"goldenpier","status":"на утверждении","channel":"WhatsApp","recipient":"https://wa.me/79372753300","site_status":"страница-конструктор Яндекса; отдельный сайт не найден"},
+    {"business":"Диана","slug":"diana-curtains","status":"на утверждении","channel":"WhatsApp","recipient":"https://wa.me/79372763478","site_status":"vk.link и соцсеть; отдельный сайт не найден"}
+  ],
+  "excluded": [
+    {"business":"Интеллектуальный сад","reason":"Яндекс Карты помечает организацию как больше не работающую; сообщение не отправлять"},
+    {"business":"Family Club","reason":"найден собственный сайт family-club-centr.ru"},
+    {"business":"Enigma Park","reason":"найден собственный сайт enigmapark.ru"},
+    {"business":"Домик","reason":"не удалось подтвердить публичный деловой контакт"}
+  ]
+}
