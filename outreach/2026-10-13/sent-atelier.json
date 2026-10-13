@@ -1,0 +1,36 @@
+{
+  "business": "Арт-ателье Ирины Благовой",
+  "status": "отправлен",
+  "sent_at": "2026-10-13T11:38:49.321Z",
+  "from": "haritonovaangelina671@gmail.com",
+  "to": "blagovaart@gmail.com",
+  "subject": "Ирина, вариант сайта для вашего арт-ателье — 2 экрана",
+  "message_html": "<p>Ирина, здравствуйте!</p><p>Меня зовут Ангелина, я из Ульяновска, занимаюсь разработкой сайтов.</p><p>Нашла ваше арт-ателье на Октябрьской. Подготовила для вас вариант сайта — прикрепляю два экрана.</p><p>Идея — помочь клиенту ещё до звонка понять, с какой задачей можно обратиться, и подготовить фото, пожелания по ткани и срокам. Это может сократить переписку перед консультацией. В варианте показаны первый экран и раздел направлений работы; услуги, прайс и материалы перед запуском обязательно согласуем с вами.</p><p>Если вам понравится направление, пришлю предложение по доработке и запуску: что войдёт в работу, сроки и стоимость.</p><p>С уважением,<br>Ангелина Харитонова</p>",
+  "gmail": {
+    "id": "1a1350e8d99e8a8a",
+    "thread_id": "1a1350e8d99e8a8a",
+    "label_ids": [
+      "SENT"
+    ],
+    "snippet": null,
+    "history_id": null,
+    "internal_date": null,
+    "payload": null,
+    "size_estimate": null,
+    "classification_label_values": null
+  },
+  "attachments": [
+    "atelier-01-desktop.png",
+    "atelier-02-request.png"
+  ],
+  "artifact_id": 11809043017,
+  "run_id": 38391374854,
+  "source_commit": "adadc0fc507deb56feff3572cc6d3c562f80d72a",
+  "recipient_verification": "Business catalogue: owner, address and phone matched. User confirmed no previous manual contact on 2026-10-13.",
+  "quality": "Two attached PNGs visually checked; mobile overflow false; no live form.",
+  "delivery_status": "Unknown; SENT confirms sending, not delivery or reading.",
+  "supersedes": [
+    "atelier-send-review.md",
+    "recipient-recheck.json atelier blocked status"
+  ]
+}
