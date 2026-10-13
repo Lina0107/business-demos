@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-13",
+  "sent": [],
+  "gmail_history_check": {
+    "query": "in:sent after:2026/10/01",
+    "result_count": 0,
+    "limitation": "Does not cover manual messenger outreach"
+  },
+  "verified_email": [
+    {
+      "business": "Арт-ателье Ирины Благовой",
+      "email": "blagovaart@gmail.com",
+      "owner": "Благова Ирина Александровна",
+      "address": "Ульяновск, Октябрьская 28А",
+      "phone": "+79093569167",
+      "source": "https://openbusiness73.ru/files/каталог_предприятий_2023.pdf",
+      "source_year": 2023,
+      "matched": [
+        "owner",
+        "address",
+        "phone",
+        "business activity"
+      ],
+      "status": "blocked_pending_prior_manual_contact_check",
+      "package": "outreach/2026-10-11",
+      "note": "Previous queue explicitly marks unknown manual recipients; not sent"
+    }
+  ],
+  "unconfirmed_email": [
+    {
+      "business": "AGS Detailing",
+      "email": "agsulsk@gmail.com",
+      "reason": "Directories only; official confirmation absent"
+    },
+    {
+      "business": "Apple Tree Pre School",
+      "email": "elephant-studio@mail.ru",
+      "reason": "Old-address directory associates email; official Elephant studio site lists it but current relationship to preschool not established"
+    },
+    {
+      "business": "Золотой причал",
+      "email": "vxx542222@yandex.ru",
+      "reason": "Directory only; current official contact not confirmed"
+    }
+  ],
+  "other_businesses": [
+    "ГрумАрт",
+    "Март",
+    "Ишеевские торты",
+    "Курс/Vet Get",
+    "Счастливые люди / Panamera",
+    "Груминг Маяковского",
+    "Батонов",
+    "Пекатория",
+    "Stay Coffee",
+    "Диана"
+  ],
+  "other_status": "No verified email found in this check; messenger sending tools unavailable. No delivery claimed."
+}
