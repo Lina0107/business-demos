@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-14",
+  "sent": [],
+  "new_completed_demos": 0,
+  "new_qualified_leads": 0,
+  "prior_sent": {
+    "atelier": {
+      "date": "2026-10-13",
+      "gmail_id": "1a1350e8d99e8a8a",
+      "do_not_repeat": true
+    }
+  },
+  "unsent_daily_queue": [
+    "ags",
+    "groomart",
+    "cakes",
+    "mart",
+    "kurs",
+    "panamera",
+    "groom",
+    "batonov",
+    "pekatoria",
+    "stay",
+    "appletree",
+    "goldenpier",
+    "diana-curtains"
+  ],
+  "manual_contact_clarification": "User confirmed daily packages never sent manually. No unknown-manual-recipient blocker applies to this queue.",
+  "research_reserve": [
+    {
+      "name": "Чистый дом",
+      "activity": "Химчистка мягкой мебели",
+      "address": "Ульяновск, проспект Зырина, 5, 1 этаж, 2 подъезд",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001109542983",
+      "rating": {
+        "source": "2ГИС",
+        "value": 5,
+        "count": 3
+      },
+      "phone": "+79539807177",
+      "phone_source": "https://telemaps.ru/ru/ulyyanovsk/p87ywg.html",
+      "website_status": "На доступной карточке отдельный сайт не указан; полная проверка по телефону и официальным соцсетям не завершена.",
+      "status": "research_incomplete",
+      "benefit_estimate": "Подбор мебели для чистки, запрос оценки по фото, согласованный прайс.",
+      "gaps": [
+        "Не подтверждены точные ссылки официальных соцсетей в сохранённом результате",
+        "Повторное открытие карточки и прайса вернуло недоступность",
+        "Не завершён поиск собственного сайта",
+        "Email не найден"
+      ]
+    },
+    {
+      "name": "Clean first",
+      "activity": "Клининг",
+      "address": "Ульяновск; точный офис не указан",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001054306727",
+      "rating": {
+        "source": "2ГИС",
+        "value": 5,
+        "count": 1
+      },
+      "vk": "https://vk.com/clean.first",
+      "whatsapp": "https://wa.me/79279804394",
+      "contact_source": "Ссылки карточки 2ГИС",
+      "status": "research_incomplete",
+      "website_status": "Сайт не указан в доступной карточке; проверка официальной страницы не завершена",
+      "benefit_estimate": "Выбор типа уборки и запрос расчёта.",
+      "gaps": [
+        "Только одна оценка",
+        "Проверка сайта и актуальности соцсети неполная",
+        "Нет доступного инструмента отправки VK/WA",
+        "Email не найден"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Клеоника",
+      "address": "Казанская, 3",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001032127052",
+      "website": "https://cleaning073.ru",
+      "reason": "Ссылка собственного сайта в карточке"
+    },
+    {
+      "name": "Центр чистки",
+      "address": "Созидателей, 10Б",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001075570055",
+      "website": "https://centrchistki.ru",
+      "reason": "Ссылка собственного сайта"
+    },
+    {
+      "name": "Капля",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001047369249",
+      "website": "https://himchistka-kaplya-uln.ru",
+      "reason": "Ссылка собственного сайта в карточке"
+    }
+  ],
+  "recipient_recheck": {
+    "ags": {
+      "email": "agsulsk@gmail.com",
+      "source": "https://mestam.info/ru/ulyanovsk/mesto/5462992-ags-detailing-gorodskaya-usadba-10a",
+      "result": "По-прежнему только справочник, официальное подтверждение не получено; не отправлено"
+    },
+    "atelier": "В проверенной переписке ответа не найдено; повторная отправка не выполнялась"
+  },
+  "limitations": [
+    "Не достигнута цель 10 законченных новых демо",
+    "Ни один новый кандидат не завершил полную квалификацию",
+    "Исходники и PNG существующих демо не изменялись",
+    "Отправки через мессенджеры недоступны; найденные email очереди не получили нового подтверждения",
+    "Часть карт перестала открываться при повторном запросе"
+  ],
+  "next": "Продолжать с очередью и подтверждёнными деловыми контактами. Не повторять отправку atelier. Не создавать дубли 13 ежедневных демо. Резерв не считать готовыми лидами."
+}
