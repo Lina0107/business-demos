@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-15",
+  "sent": [],
+  "new_qualified_leads": 0,
+  "new_completed_demos": 0,
+  "queue_carried_from": "outreach/2026-10-14/queue.json",
+  "reply_check": {
+    "recipient": "blagovaart@gmail.com",
+    "result": "Only prior sent message 1a1350e8d99e8a8a returned; no reply found; no repeat sent"
+  },
+  "render_access": {
+    "workflow_read": true,
+    "path": ".github/workflows/screenshots.yml",
+    "new_run_started": false,
+    "note": "Pipeline configuration accessible. No new render validated today."
+  },
+  "researched_sectors": [
+    "Багетные и художественные мастерские",
+    "Ремонт обуви"
+  ],
+  "reserve": [
+    {
+      "name": "Багет-К",
+      "address": "Ульяновск, Бебеля, 28, цокольный этаж",
+      "phone": "+79176195555",
+      "phone_source": "https://spravkainform.ru/russia/ulyanovsk/masterskie-hudozhnikov/baget-k",
+      "map": "https://2gis.ru/ulyanovsk/firm/70000001029829354",
+      "rating": {
+        "source": "2ГИС search index",
+        "value": 5,
+        "count": 2
+      },
+      "status": "research_incomplete",
+      "gaps": [
+        "Карточка помечена давно не обновлявшейся",
+        "Прямое открытие карты недоступно",
+        "Ссылка VK не извлечена",
+        "Email не подтверждён",
+        "Поиск собственного сайта не завершён"
+      ],
+      "potential_benefit": "Каталог профилей рам, примеры оформления, запрос расчёта по размерам и фото; оценка, не подтверждённый спрос"
+    },
+    {
+      "name": "Simbirsk Baget",
+      "address": "Ульяновск, Льва Толстого, 54/13",
+      "phone": "+79278099980",
+      "map_yandex": "https://yandex.com/maps/org/simbirsk_baget/51360985013/reviews/",
+      "map_2gis": "https://2gis.ru/ulyanovsk/firm/70000001037459068/tab/reviews",
+      "rating": {
+        "source": "Яндекс search index карточки здания",
+        "value": 4.8,
+        "count": 28
+      },
+      "status": "research_incomplete",
+      "gaps": [
+        "Справочник помечает Есть сайт, URL ещё не установлен",
+        "Прямые карточки не открылись",
+        "Нет подтверждённого email"
+      ],
+      "do_not_classify_as_no_website": true
+    },
+    {
+      "name": "Цветной мир",
+      "address": "Ульяновск, Брестская, 78с1",
+      "phone": "+79278242349",
+      "source": "https://spravkainform.ru/russia/ulyanovsk/centry-fotouslug/cvetnoy-mir",
+      "status": "research_incomplete",
+      "gaps": [
+        "Не найдена подтверждённая карта с отзывами",
+        "Нет подтверждённого делового email",
+        "Не путать с московским продавцом 3D оборудования cvetmir3d.ru"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Сириус-К",
+      "site": "https://sirius-k.ru/",
+      "reason": "Собственный сайт найден"
+    },
+    {
+      "name": "Багетная мастерская ИП Митякина С.А.",
+      "address": "Ульяновский проспект,14",
+      "site": "https://bagetnaya.com",
+      "source": "https://spravkainform.ru/russia/ulyanovsk/tovary-i-materialy-dlya-hudozhestvennyh-masterskih-studiy/bagetnaya-masterskaya-0",
+      "reason": "В справочнике указан собственный домен; не включать без проверки как отсутствие сайта"
+    }
+  ],
+  "other_cases": [
+    {
+      "name": "Ботфорт",
+      "address": "Радищева,33",
+      "page": "https://botfort.clients.site/",
+      "status": "existing_builder_page_not_no_site"
+    }
+  ],
+  "limitations": [
+    "No qualified new leads; 10-demo goal not achieved",
+    "Map direct opens return inaccessible; index evidence alone insufficient to complete checks",
+    "No verified new recipient; no messages sent",
+    "Focused Sales skill unavailable; Acumen research_brief tool absent; used web search directly"
+  ],
+  "next": "Не повторять отправку Atelier. Сохранить13 неотправленных ежедневных пакетов. Резерв не считать квалифицированными лидами и не отправлять без завершения проверки."
+}
