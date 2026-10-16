@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-16",
+  "sent": [],
+  "new_completed_demos": 0,
+  "new_qualified_leads": 0,
+  "carried_queue": "outreach/2026-10-14/queue.json",
+  "previous_research": "outreach/2026-10-15/queue.json",
+  "updated_candidate": {
+    "id": "apelsin-repair",
+    "name": "Апельсин — магазин запчастей и сервисный центр",
+    "address": "Ульяновск, улица Рябикова,75,1этаж",
+    "owner": "ИП Шебеко Эдуард Владимирович",
+    "owner_source": "https://2gis.ru/ulyanovsk/firm/70000001040599495/tab/prices",
+    "map": "https://2gis.ru/ulyanovsk/firm/70000001040599495",
+    "rating": {
+      "source": "2ГИС; direct card opened 2026-10-16",
+      "value": 3.9,
+      "count": 30
+    },
+    "email": "shebeko73@mail.ru",
+    "email_status": "Подтверждён в контактах карточки 2ГИС, название и адрес совпадают; также совпадает с двумя справочниками.",
+    "whatsapp": "https://wa.me/79084808520",
+    "phone": "+79084808520",
+    "additional_directory_phones": [
+      "+78422977546",
+      "+79510977546"
+    ],
+    "phone_source": "https://help-tel.ru/ulyanovsk-city/uslugi/bitovie/ustanovka-i-remont-bitovoy-tekhniki/open-586744",
+    "website_status": "Отдельный сайт не найден при проверке названия, адреса, телефона, email и имени ИП; официальная соцсеть не найдена. Связь с STR-Service в том же ТЦ не установлена.",
+    "best_channel": "email",
+    "demo_status": "not_created",
+    "outreach_status": "not_sent",
+    "priority": "medium_pending_final_qualification",
+    "benefit": "Каталог запчастей с подбором по модели и фото шильдика, описание неисправности для предварительной оценки ремонта.",
+    "price_source_date": "2023-04-13",
+    "price_warning": "Прайс в2ГИС устарел. Не использовать цены как актуальные.",
+    "gaps": [
+      "Не изучены реальные фотографии",
+      "Не завершена проверка текущего бренда и связи с другими сервисами по этому адресу",
+      "Демо и скриншотов нет"
+    ],
+    "next": "Завершить квалификацию; затем индивидуальное демо и проверенные PNG; перед отправкой проверить SENT по email."
+  },
+  "render_check": {
+    "existing_pngs_present": true,
+    "new_render_performed": false
+  },
+  "limitations": [
+    "Цель10демо не достигнута; сегодня новые исходники и PNG не созданы",
+    "Сообщения не отправлялись; подтверждение почты не равно готовности пакета"
+  ]
+}
