@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-17",
+  "sent": [],
+  "new_completed_demos": 0,
+  "new_unique_leads": 0,
+  "previous_queue": "outreach/2026-10-16/queue.json",
+  "candidate_update": {
+    "id": "apelsin-repair",
+    "email": "shebeko73@mail.ru",
+    "sent_history_check": "in:sent to:shebeko73@mail.ru",
+    "sent_history_results": 0,
+    "identity_check": {
+      "apelsin_owner": "ИП Шебеко Эдуард Владимирович (2ГИС каталог, проверено16.10)",
+      "str_service_owner": "ИП Фаесханов Алик Ингелевич",
+      "str_service_source": "https://str-service73.ru/service/dogovor-publichnoy-oferty-na-predostavlenie-uslug-servisnogo-obslujivaniya",
+      "str_service_address_note": "На Рябикова75 указан приёмный постамат в ТЦ Одесса, а не основание приписывать весь бизнес Апельсин сети.",
+      "str_contacts": "https://str-service73.ru/contacts",
+      "conclusion": "Разные указанные ИП, телефоны и email. Сайт STR-Service нельзя считать найденным сайтом Апельсина лишь из-за совпадения адреса. Иная связь не исследована и не утверждается."
+    },
+    "website_status": "Отдельный сайт Апельсина не найден в выполненных ранее проверках; отсутствие не гарантируется.",
+    "demo_status": "not_created",
+    "outreach_status": "not_sent",
+    "remaining": [
+      "Изучить визуальные материалы: страница фото2ГИС сегодня недоступна",
+      "Создать отдельное демо и2–3скриншота",
+      "Проверить PNG и мобильную компоновку перед отправкой"
+    ]
+  },
+  "technical_checks": {
+    "repository_read_write": true,
+    "gmail_search": true,
+    "sites_managed_environment": true,
+    "local_preview": "control-browser skill unavailable; no improvised local browser installed",
+    "github_render": "Known pipeline retained; new render not run; not claimed unavailable"
+  },
+  "goal_shortfall": "0/10 новых законченных демо. Проверка контакта продвинута, но производство пакета не выполнено. Незавершённые предложения не отправлялись."
+}
