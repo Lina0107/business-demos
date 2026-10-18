@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-18",
+  "completedNewDemos": 1,
+  "target": 10,
+  "sentToday": [
+    "apelsin-repair"
+  ],
+  "alreadySentDoNotRepeat": [
+    "atelier",
+    "apelsin-repair"
+  ],
+  "unchangedUnsent": [
+    "ags",
+    "groomart",
+    "cakes",
+    "mart",
+    "kurs",
+    "panamera",
+    "groom",
+    "batonov",
+    "pekatoria",
+    "stay",
+    "appletree",
+    "goldenpier",
+    "diana-curtains"
+  ],
+  "newUniqueDiscovered": 0,
+  "qualifiedFromReserve": [
+    "apelsin-repair"
+  ],
+  "websiteCheck": {
+    "apelsin": "Отдельный сайт не найден при проверке по названию+адресу и email. Официальные соцсети не найдены. STR-Service не приписан этому бизнесу."
+  },
+  "limitations": [
+    "Девять дополнительных новых пакетов в этом запуске не подготовлены; не добран подтверждённый состав для их создания.",
+    "Прежние 13 пакетов не отправлены: подтверждённый доступный канал отправки не установлен; не риск ручного дубля.",
+    "Полная свежая перепроверка всей прежней очереди не выполнена."
+  ]
+}
