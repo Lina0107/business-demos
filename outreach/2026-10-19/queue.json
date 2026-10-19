@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-19",
+  "newQualified": 0,
+  "newDemos": 0,
+  "targetDemos": 10,
+  "sent": [],
+  "doNotRepeat": [
+    "atelier",
+    "apelsin-repair"
+  ],
+  "rendering": "GitHub artifact 12124812159 confirmed accessible, not expired; no new render run",
+  "research": [
+    {
+      "name": "Карамель",
+      "sector": "фотостудия",
+      "address": "Ульяновск, Московское шоссе 86а, 3 этаж",
+      "rating": "2ГИС 4.4 / 8",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001036866594",
+      "phone": "+79656999959",
+      "vk": "https://vk.com/fotostudiokaramel",
+      "whatsapp": "https://wa.me/79656999959",
+      "telegram": "https://t.me/+79656999959",
+      "emailCandidate": "german880@yandex.ru",
+      "emailStatus": "Только в агрегаторе публичной страницы, обозначен владельцем, телефон совпадает с 2ГИС. Имя владельца и email в первоисточнике не подтверждены; не отправлять.",
+      "emailSource": "https://ulyanovsk.vyboruslug.com/razvlecheniya/fotostudiokaramel.html",
+      "website": "Не найден подтверждённый самостоятельный сайт; старое упоминание vh180.timeweb.ru требует выяснения. caramel73.ru указан для одноимённого бизнеса Докучаева18, не приписывать фотостудии.",
+      "status": "резерв, не квалифицирован",
+      "benefit": "Сравнение залов, условия аренды, портфолио и запрос на съёмку; оценка пользы, не доказанный спрос"
+    },
+    {
+      "name": "Clover",
+      "address": "Московское шоссе92,827–831офис,8этаж по2ГИС",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001034187975",
+      "yandex": "https://yandex.ru/maps/org/klover/184038936907/",
+      "rating": "2ГИС5/1",
+      "phone": "+79297959555",
+      "vk": "https://vk.com/clover_studio73",
+      "telegram": "https://t.me/clover_studio73",
+      "whatsapp": "https://wa.me/79297959555",
+      "status": "конфликт статуса: Яндекс больше не работает,2ГИС активен. Не отправлять до разрешения.",
+      "website": "Старый clover-studio.ru требует проверки; orgs.biz агрегированная страница, не доказательство собственного сайта."
+    },
+    {
+      "name": "Клюква",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001021135987",
+      "address": "Верхнеполевая12/14",
+      "rating": "3.8/11",
+      "phone": "+79021253526",
+      "vk": "https://vk.com/klukva_73",
+      "status": "резерв, сервис бронирования уже есть",
+      "booking": "https://klukva.cue.business/",
+      "gap": "Страница бронирования не открылась; не считать отсутствием сайта.2ГИС предупреждает о давно не обновлявшихся данных."
+    },
+    {
+      "name": "ATstudio",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001046966324",
+      "address": "Пушкарёва64",
+      "rating": "4.2/10",
+      "phone": "+79510962209",
+      "website": "www.trepachev-foto.ru указан несколькими справочниками, сейчас не открылся",
+      "status": "не включать как без сайта"
+    },
+    {
+      "name": "The1827st",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001099437577",
+      "address": "Октябрьская22мст1,2этаж",
+      "rating": "5/1",
+      "status": "не квалифицирован, недостаточно проверенных контактов"
+    },
+    {
+      "name": "Banana Mama",
+      "maps": "https://2gis.ru/ulyanovsk/firm/70000001022890831",
+      "address": "Московское шоссе92,309–311офис",
+      "status": "в проверенной карточке нет оценок, не квалифицирован"
+    },
+    {
+      "name": "Селфклик",
+      "website": "https://selfclick.ru/Ulyanovsk/kontakty/",
+      "status": "исключён: общий сайт сети"
+    },
+    {
+      "name": "Eva Keya",
+      "website": "https://www.eva-keya.ru/",
+      "status": "исключён: собственный сайт"
+    }
+  ],
+  "oldQueueRecheck": "По Ишеевским тортам, Пекатории и Диане выполнен дополнительный поиск email, подтверждённого нового адреса не найдено. Полная перепроверка13компаний не выполнена.",
+  "limitation": "Не набрано10перепроверенных компаний для новых демо; новые исходники не создавались.Нет установленного отправителя VK/TG/WA.Цель не выполнена."
+}
