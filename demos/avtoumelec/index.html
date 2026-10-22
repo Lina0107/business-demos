@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>АвтоУмелец — сигнализации, автозвук, тонировка</title>
+<style>
+:root{--black:#101216;--panel:#191d23;--steel:#9ca6b2;--paper:#f3f4f2;--lime:#c6ff38;--line:#303640}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--paper);font:16px/1.5 Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}.demo{padding:8px 18px;background:var(--lime);color:#151915;text-align:center;font:700 11px/1.4 Arial;letter-spacing:.12em;text-transform:uppercase}
+.wrap{max-width:1180px;margin:auto;padding:0 34px}header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:23px;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}.brand i{font-style:normal;color:var(--lime)}
+nav{display:flex;gap:28px;font-size:13px;color:#c4c9cf}nav a{text-decoration:none}.call{border:1px solid #737d89;padding:10px 14px;color:white}
+.hero{min-height:630px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:44px;padding:58px 0 44px;position:relative}
+.kicker{font:700 12px/1.4 monospace;letter-spacing:.18em;color:var(--lime);text-transform:uppercase}
+h1{font-size:74px;line-height:.92;letter-spacing:-.065em;margin:22px 0 26px;text-transform:uppercase}h1 span{color:transparent;-webkit-text-stroke:1px #cbd2da}
+.lead{font-size:19px;color:#bac1ca;max-width:560px}.actions{display:flex;align-items:center;gap:22px;margin-top:32px}
+.btn,button{display:inline-block;background:var(--lime);color:#11160c;border:0;padding:15px 20px;font:800 14px Arial;text-decoration:none;cursor:pointer}.link{font-size:13px;color:#dbe0e5}
+.machine{min-height:460px;border:1px solid var(--line);background:linear-gradient(145deg,#252b33,#13161a 64%);position:relative;padding:28px;overflow:hidden}
+.machine:before{content:"";position:absolute;width:340px;height:340px;border:1px solid #48515c;border-radius:50%;right:-60px;top:70px;box-shadow:0 0 0 35px rgba(255,255,255,.015),0 0 0 70px rgba(255,255,255,.01)}
+.machine svg{position:absolute;inset:72px 14px 30px 14px;width:100%;height:330px}.machine small{position:absolute;left:28px;bottom:25px;color:#858f9b;max-width:260px}
+.tag{position:absolute;right:22px;top:20px;font:12px monospace;color:#8c96a1;writing-mode:vertical-rl}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stat{padding:23px 28px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;color:var(--lime);font-size:22px}.stat span{color:#9da6b0;font-size:13px}
+.services{padding:76px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-head h2{font-size:42px;line-height:1.05;letter-spacing:-.04em;margin:10px 0}.section-head p{color:#9fa8b3;max-width:470px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.service{background:var(--panel);padding:31px;min-height:235px}.service .num{color:var(--lime);font:13px monospace}.service h3{font-size:25px;margin:28px 0 12px}.service p{color:#a8b0b9;font-size:14px}.service small{color:#78828d}
+#request{margin:20px 0 76px;background:var(--paper);color:#171a1d;display:grid;grid-template-columns:.9fr 1.1fr;min-height:470px}.request-copy{padding:48px}.request-copy h2{font-size:46px;line-height:1;margin:15px 0 22px;letter-spacing:-.05em}.request-copy p{color:#515960}.steps{margin-top:30px;border-top:1px solid #c7cace}.steps div{padding:12px 0;border-bottom:1px solid #d4d6d7;font-size:13px}.steps b{display:inline-block;width:34px}
+form{padding:44px;background:#e3e6e5}label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:15px}input,textarea,select{display:block;width:100%;margin-top:7px;border:1px solid #abb0b2;background:#f8f9f7;padding:13px;font:15px Arial;color:#171a1d}textarea{height:82px;resize:vertical}button{margin-top:4px}#draft{margin-top:14px;white-space:pre-wrap;font-size:12px;color:#4d565b}.safe{display:block;margin-top:15px;color:#626a70;font-size:11px}
+.contact{display:flex;justify-content:space-between;gap:30px;border-top:1px solid var(--line);padding:42px 0 60px}.contact h2{font-size:34px;margin:6px 0}.channels{display:flex;gap:10px;flex-wrap:wrap;align-content:center}.channels a{border:1px solid #555f6a;padding:11px 13px;text-decoration:none;font-size:13px}
+footer{border-top:1px solid var(--line);padding:18px 0;color:#727c87;font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:700px){.wrap{padding:0 20px}header{height:68px}nav a:not(.call){display:none}.brand{font-size:19px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:28px;min-height:auto}h1{font-size:48px}.lead{font-size:16px}.actions{align-items:flex-start;flex-direction:column;gap:14px}.machine{min-height:320px}.machine svg{height:220px;inset:55px 8px 35px}.machine:before{width:240px;height:240px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line);padding:16px}.section-head{display:block}.section-head h2{font-size:35px}.grid{grid-template-columns:1fr}.service{min-height:auto}.services{padding:52px 0}#request{grid-template-columns:1fr}.request-copy,form{padding:27px}.request-copy h2{font-size:37px}.contact{display:block}.channels{margin-top:24px}footer{display:block}.tag{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo">Демонстрационный вариант · наполнение и услуги требуют согласования</div>
+<div class="wrap">
+<header><div class="brand">Авто<i>Умелец</i></div><nav><a href="#services">Направления</a><a href="#request">Подобрать решение</a><a class="call" href="tel:+79372757037">+7 937 275-70-37</a></nav></header>
+<main>
+<section class="hero">
+<div><div class="kicker">Ульяновск · Новый город</div><h1>Техника.<br><span>Комфорт.</span><br>Контроль.</h1><p class="lead">Сигнализации, автозвук и тонировка. Сайт помогает заранее описать автомобиль и задачу — мастеру остаётся уточнить совместимость и время установки.</p><div class="actions"><a class="btn" href="#request">Собрать запрос →</a><a class="link" href="#services">Посмотреть направления ↓</a></div></div>
+<div class="machine"><div class="kicker">Схема подключения / 01</div><div class="tag">ILLUSTRATION · NOT A PRODUCT PHOTO</div>
+<svg viewBox="0 0 520 330" role="img" aria-label="Схематичный силуэт автомобиля и цепи оборудования"><g fill="none" stroke="#9ba7b4" stroke-width="2"><path d="M58 220h32l24-73q10-29 38-38l107-31q35-10 62 9l66 48q19 14 29 38l18 47h25v43H58z"/><path d="M137 148h244M181 112l-22 36M284 82l30 66M75 220h371"/><circle cx="151" cy="250" r="43"/><circle cx="370" cy="250" r="43"/><circle cx="151" cy="250" r="15" stroke="#c6ff38"/><circle cx="370" cy="250" r="15" stroke="#c6ff38"/><path d="M250 166v52m0-26h-72m72 0h76" stroke="#c6ff38" stroke-dasharray="6 7"/><circle cx="250" cy="192" r="9" fill="#c6ff38" stroke="none"/><path d="M224 142q26-34 52 0" stroke="#c6ff38"/></g></svg>
+<small>Схематичная иллюстрация. Подбор оборудования и возможность установки зависят от автомобиля и комплектации.</small></div>
+</section>
+<div class="stats"><div class="stat"><b>01</b><span>Марка, модель и год</span></div><div class="stat"><b>02</b><span>Нужная функция</span></div><div class="stat"><b>03</b><span>Согласование решения</span></div></div>
+<section class="services" id="services"><div class="section-head"><div><div class="kicker">Направления мастерской</div><h2>Оборудование<br>под вашу задачу.</h2></div><p>Без выдуманного прайса: на сайте можно показать сценарии и запросить данные автомобиля, а конкретные комплекты и стоимость подтвердит мастер.</p></div>
+<div class="grid"><article class="service"><span class="num">01 / SECURITY</span><h3>Сигнализации</h3><p>Запуск, управление и дополнительные функции — после проверки совместимости с автомобилем.</p><small>Комплект и цена — по запросу</small></article><article class="service"><span class="num">02 / SOUND</span><h3>Автозвук</h3><p>Запрос на подбор компонентов и установку с учётом пожеланий к звучанию.</p><small>Состав работ — после консультации</small></article><article class="service"><span class="num">03 / GLASS</span><h3>Тонировка</h3><p>Выбор задачи и предварительная запись без длинной переписки в нескольких каналах.</p><small>Материалы и стоимость — по запросу</small></article></div></section>
+<section id="request"><div class="request-copy"><div class="kicker" style="color:#526000">Черновик обращения</div><h2>С чего<br>начать?</h2><p>Укажите автомобиль и желаемый результат. Демо подготовит текст — ничего не отправит.</p><div class="steps"><div><b>01</b>Выберите направление</div><div><b>02</b>Укажите автомобиль</div><div><b>03</b>Добавьте пожелание</div></div></div>
+<form><label>Направление<select id="kind"><option>Сигнализация</option><option>Автозвук</option><option>Тонировка</option></select></label><label>Автомобиль<input name="detail" placeholder="Марка, модель, год" required></label><label>Что хочется получить<textarea name="comment" placeholder="Кратко опишите задачу" required></textarea></label><button type="submit">Показать черновик</button><div id="draft" aria-live="polite">Черновик ещё не создан. Запрос не отправлен.</div><span class="safe">Демонстрационная форма: данные остаются в браузере, запись не создаётся.</span></form></section>
+<section class="contact"><div><div class="kicker">АвтоУмелец</div><h2>Проспект Созидателей, 35о</h2><p>10 бокс · по предварительной записи</p></div><div class="channels"><a href="mailto:ustanovki@mail.ru">Email</a><a href="https://vk.com/avtoymelec" target="_blank" rel="noopener">ВКонтакте</a><a href="https://wa.me/79372757037" target="_blank" rel="noopener">WhatsApp</a><a href="https://2gis.ru/ulyanovsk/firm/70000001020569693" target="_blank" rel="noopener">2ГИС</a></div></section>
+</main><footer><span>Демонстрационный проект для «АвтоУмельца»</span><span>Не является официальным сайтом компании</span></footer>
+</div>
+<script>document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const k=document.querySelector('#kind').value;document.querySelector('#draft').textContent='Черновик — запрос не отправлен.\n'+k+' · '+e.target.detail.value+'\n'+e.target.comment.value})</script>
+</body></html>
