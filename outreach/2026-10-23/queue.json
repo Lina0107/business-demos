@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-23",
+  "new_candidates": [
+    {
+      "slug": "vassa",
+      "name": "Васса",
+      "sector": "оптика",
+      "status": "demo_source_ready_screenshots_pending",
+      "site_status": "constructor_vassa.clients.site_redesign_case",
+      "address_2gis": "Ульяновск, ул. Орлова, 29Б",
+      "rating_2gis": "4.6 / 45",
+      "address_yandex": "Ульяновск, ул. Островского, 40А/29Б",
+      "rating_yandex": "4.5 / 42",
+      "phone": "+7 (8422) 31-07-83",
+      "channels": [
+        "VK",
+        "OK",
+        "WhatsApp",
+        "Telegram"
+      ],
+      "email": null,
+      "commit": "436fb6537a333027cc2fb36764b63070812aa9a5",
+      "workflow_run": 39899300841,
+      "sent": false
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Клинч",
+      "reason": "official_site_found",
+      "site": "https://clinchbarbershop.ru/"
+    }
+  ],
+  "replies": []
+}
