@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-24",
+  "completed_packages": [
+    {
+      "slug": "vassa",
+      "name": "Васса",
+      "status": "demo_ready_awaiting_send",
+      "recipient": {
+        "channel": "WhatsApp",
+        "value": "+79051839492",
+        "url": "https://wa.me/79051839492"
+      },
+      "alternate_channels": {
+        "vk": "https://vk.com/opticavassa",
+        "ok": "https://ok.ru/group/70000001301909",
+        "telegram_channel": "https://t.me/opticavassa"
+      },
+      "source_commit": "b3b1463ef02d412fc4679ac7021c0037c921490c",
+      "workflow_run": 40061531723,
+      "artifact_id": 12548005589,
+      "qa": {
+        "screenshots": 3,
+        "mobile_overflow": false,
+        "form": "draft only",
+        "visual_review": "passed"
+      },
+      "sent": false,
+      "message": "Здравствуйте! Меня зовут Ангелина, я из Ульяновска, занимаюсь разработкой сайтов. Подготовила для «Вассы» вариант сайта — прикрепляю несколько экранов. В концепте покупатель может выбрать направление очков, описать пожелания и перейти к подбору в удобном салоне. Каталог, актуальные модели, наличие, цены и список всех 12 салонов можно согласовать с вами и подключить в рабочей версии. Если идея вам интересна, пришлю состав работ, сроки и стоимость доработки."
+    }
+  ],
+  "new_candidates": [],
+  "excluded": [
+    {
+      "name": "Ultra Place",
+      "site": "https://fitness-ultra.ru"
+    },
+    {
+      "name": "Первая цифровая типография",
+      "site": "https://1zifra.ru"
+    },
+    {
+      "name": "Brand and Space",
+      "site": "https://brandandspace.ru"
+    },
+    {
+      "name": "Клинч",
+      "site": "https://clinchbarbershop.ru"
+    }
+  ],
+  "replies": []
+}
