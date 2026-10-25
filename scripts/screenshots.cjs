@@ -45,3 +45,5 @@ const { pathToFileURL } = require('node:url');
  await fs.writeFile('screenshots/checks.json',JSON.stringify(reports,null,2));
  } finally { await browser.close(); }
 })().catch(e=>{console.error(e);process.exit(1)});
+
+// Render refresh: 2026-10-25
