@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-25",
+  "new_candidates": [
+    {
+      "slug": "positive",
+      "name": "Позитив",
+      "sector": "центр печати",
+      "address": "Ульяновск, Хрустальная улица, 38",
+      "ratings": {
+        "2gis": "5.0 / 25",
+        "yandex": "4.6 / 33"
+      },
+      "contacts": {
+        "phone_official_page": "+79022447000",
+        "phone_whatsapp_2gis": "+79022158000",
+        "email": "pozitiv-ul@mail.ru",
+        "vk": "https://vk.com/ul_pozitiv",
+        "whatsapp": "https://wa.me/79022158000",
+        "viber": "published in 2GIS",
+        "telegram": null,
+        "instagram": null
+      },
+      "website_status": "Existing Wix builder page; redesign case",
+      "website": "https://pozitiv-ul.wixsite.com/pozitiv",
+      "priority": "high",
+      "status": "sent",
+      "source_commit": "9579c374386681c233fb48318cce4d11ea29bfac",
+      "workflow_run": 40162705479,
+      "artifact_id": 12586528768,
+      "qa": {
+        "screenshots": 3,
+        "mobile_overflow": false,
+        "form": "draft only",
+        "visual_review": "passed"
+      },
+      "send": {
+        "recipient": "pozitiv-ul@mail.ru",
+        "gmail_id": "1a17160009c80951",
+        "thread_id": "1a17160009c80951",
+        "label": "SENT",
+        "delivery": "unknown",
+        "read": "unknown"
+      }
+    }
+  ],
+  "replies": [],
+  "summary": {
+    "new_candidates": 1,
+    "completed_demos": 1,
+    "sent": 1,
+    "target": 10
+  }
+}
