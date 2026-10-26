@@ -1,0 +1,21 @@
+{
+  "business": "Dr.Fix",
+  "recipient": "hairetdinov.tim@yandex.ru",
+  "channel": "Gmail",
+  "sent_at": "2026-10-26T08:36:00+04:00",
+  "status": "sent",
+  "gmail_id": "1a1767ebd92233ae",
+  "thread_id": "1a1767ebd92233ae",
+  "label_ids": ["SENT"],
+  "delivery_or_read_confirmed": false,
+  "subject": "Вариант сайта для Dr.Fix — несколько экранов",
+  "attachments": [
+    "drfix-first-screen.png",
+    "drfix-request-form.png",
+    "drfix-mobile.png"
+  ],
+  "recipient_verification": {
+    "evidence": "Email is published in the active Dr.Fix 2GIS card matching the business name and Ulyanovsky Prospekt 20 address; exact address and contacts also match public directory results.",
+    "duplicate_check": "No earlier Gmail message to this address was found before sending."
+  }
+}
