@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-26",
+  "business": "Dr.Fix",
+  "address": "Ульяновск, Ульяновский проспект, 20, 1 этаж",
+  "ratings": {
+    "yandex": {"rating": 5.0, "ratings": 113, "reviews": 105, "url": "https://yandex.ru/maps/org/dr_fix/103166108661/reviews/"},
+    "2gis": {"rating": 4.8, "ratings": 81, "reviews": 79, "url": "https://2gis.ru/ulyanovsk/firm/70000001023969772"}
+  },
+  "contacts": {
+    "phones": ["+7 951 092-10-03", "+7 902 004-13-30"],
+    "email": "hairetdinov.tim@yandex.ru",
+    "vk": "https://vk.com/ulcomp",
+    "telegram": "https://t.me/timur_drfix",
+    "whatsapp": "+7 902 004-13-30",
+    "youtube": "https://youtube.com/channel/UCq_gGZVxte8lqvTuaVehRdQ",
+    "instagram": null
+  },
+  "site_check": "Отдельный собственный сайт не найден при проверке по названию, городу, точному адресу, двум телефонам и email. Найдены карточки, соцсети и справочники; абсолютное отсутствие сайта не утверждается.",
+  "demo": {
+    "source": "demos/drfix/index.html",
+    "commit": "7bee4504fb96ab45171751b9e2544f132509f262",
+    "workflow_run": 40268934737,
+    "artifact": 12627813135,
+    "screenshots": 3,
+    "mobile_overflow": false,
+    "form": "draft only",
+    "visual_review": "passed"
+  },
+  "queue_status": "sent"
+}
