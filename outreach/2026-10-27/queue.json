@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-27",
+  "new_candidates": [
+    {
+      "slug": "dmitry-computerov",
+      "name": "Дмитрий Компьютеров",
+      "sector": "ремонт компьютеров и мобильной техники",
+      "address": "Ульяновск, проспект Нариманова, 75, стр. 1, ТК «Удача», 3 бутик",
+      "phone": "+79004474707",
+      "email": null,
+      "instagram": "https://www.instagram.com/dmitry_computerov/",
+      "whatsapp": "https://wa.me/79004474707",
+      "site_status": "Отдельный самостоятельный сайт не найден при проверке; в карточках указаны социальные сети и мессенджеры.",
+      "status": "демо готово → на утверждении",
+      "send_status": "не отправлено: подтвержденного email нет, отправитель WhatsApp/Instagram не подключен",
+      "demo_commit": "9863c0f80b01b34ff46c46529b7e005e5f1d33af",
+      "workflow_run": 40452799392,
+      "artifact_id": 12711485596,
+      "screenshots": ["01-desktop.png", "02-request.png", "03-mobile.png"]
+    }
+  ],
+  "sent": []
+}
