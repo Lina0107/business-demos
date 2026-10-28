@@ -1,0 +1,15 @@
+{
+  "business": "Авторская студия-ателье Светланы Денисовой",
+  "recipient": "svetdenis23@mail.ru",
+  "channel": "email",
+  "sent_at": "2026-10-28T08:29:00+04:00",
+  "gmail_id": "1a180c15505cacb8",
+  "thread_id": "1a180c15505cacb8",
+  "label": "SENT",
+  "attachments": ["01-desktop.png", "02-request.png", "03-mobile.png"],
+  "delivery_status": "not_confirmed",
+  "read_status": "not_confirmed",
+  "source_commit": "73976ff97d8a757f7085d0d401169e631e3da527",
+  "screenshot_run": 40631970262,
+  "artifact_id": 12792195806
+}
