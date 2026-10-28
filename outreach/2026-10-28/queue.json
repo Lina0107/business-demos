@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-28",
+  "new_candidates": [
+    {
+      "slug": "svetlana-denisova",
+      "business": "Авторская студия-ателье Светланы Денисовой",
+      "status": "sent",
+      "stages": ["found", "rechecked", "demo_ready", "sent"],
+      "recipient": "svetdenis23@mail.ru",
+      "gmail_id": "1a180c15505cacb8"
+    }
+  ],
+  "existing_queue_actions": [
+    {
+      "slug": "dmitry-computerov",
+      "business": "Дмитрий Компьютеров",
+      "status": "sent",
+      "recipient": "dm.bednov@yandex.ru",
+      "gmail_id": "1a180bd68533d90b"
+    }
+  ],
+  "new_demo_count": 1,
+  "sent_count": 2,
+  "delivery_confirmed_count": 0
+}
