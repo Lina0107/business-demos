@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-29",
+  "new_candidates": [
+    {
+      "slug": "mir-torzhestv",
+      "business": "Мир торжеств",
+      "status": "sent",
+      "stages": ["found", "rechecked", "demo_ready", "sent"],
+      "recipient": "v.ivanov1971@mail.ru",
+      "gmail_id": "1a18601253e5966e"
+    }
+  ],
+  "excluded": [
+    {"business": "Minimal", "reason": "found own website фото-минимал.рф"},
+    {"business": "Allen Buket", "reason": "found own website allenbuket.ru"},
+    {"business": "Меланж", "reason": "found own website melanzh73.ru"}
+  ],
+  "new_demo_count": 1,
+  "sent_count": 1,
+  "delivery_confirmed_count": 0
+}
