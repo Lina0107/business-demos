@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-01",
+  "new_candidates": [
+    {
+      "slug": "zifa",
+      "business": "Ателье ZIFA / Зифа",
+      "status": "demo_ready_pending_contact",
+      "stages": [
+        "found",
+        "rechecked",
+        "demo_ready",
+        "pending_contact"
+      ],
+      "address": "Ульяновск, улица Льва Толстого, 38",
+      "rating": "Яндекс Услуги: 4.8/5, 27 отзывов (не Яндекс Карты)",
+      "phone": "+7 909 357-78-44",
+      "contact": {
+        "channel": "WhatsApp",
+        "url": "https://wa.me/79093577844",
+        "verification": "публичная ссылка в карточке Spravka.City; номер совпадает с номером ателье"
+      },
+      "own_site": "separate_site_not_found_after_search",
+      "demo": {
+        "source": "demos/zifa/index.html",
+        "commit": "868f22285102b239a41612b0ee5ac58cb9385f0b",
+        "screenshots": 3,
+        "run_id": "41275413223",
+        "artifact_id": "13070419621",
+        "mobileOverflow": false,
+        "form": "draft only",
+        "visualReview": "passed"
+      },
+      "sent": false,
+      "send_blocker": "Нет доступного инструмента отправки в WhatsApp; email не подтвержден. Кнопка чата откроет WhatsApp, изображения прикрепляются вручную."
+    }
+  ],
+  "excluded": [
+    {
+      "business": "Cozy Studio",
+      "reason": "обнаружен собственный сайт studiocozy.ru"
+    },
+    {
+      "business": "Stretching for you",
+      "reason": "уже известна из предыдущей переписки/задачи; не новый контакт"
+    },
+    {
+      "business": "Алоха",
+      "reason": "обнаружен собственный сайт aloha-english.ru"
+    },
+    {
+      "business": "Сажа",
+      "reason": "обнаружен собственный сайт sazha73.ru"
+    },
+    {
+      "business": "English Room",
+      "reason": "доступная карточка указывает на новую школу без отзывов; не прошла требование отзывов"
+    }
+  ],
+  "new_demo_count": 1,
+  "sent_count": 0,
+  "delivery_confirmed_count": 0
+}
