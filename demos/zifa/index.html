@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Концепт сайта ателье ZIFA в Ульяновске: индивидуальный пошив одежды и ремонт.">
+<title>ZIFA — ателье индивидуального пошива в Ульяновске</title>
+<style>
+:root{--ink:#202626;--muted:#66706a;--paper:#f7f4ed;--card:#fffdf8;--wine:#733e43;--wine2:#9b5b5f;--rust:#c77b62;--sage:#aeb7a7;--line:#d9d9d0;--gold:#d8b76c;--shadow:0 22px 70px rgba(32,38,38,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 64px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:800;letter-spacing:.16em}.brand-mark{height:38px;width:38px;border:1px solid var(--wine);border-radius:50%;display:grid;place-items:center;color:var(--wine);font:italic 20px Georgia}.nav{display:flex;gap:32px;color:#505852;font-size:14px}.header-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--wine);color:#fff;border-radius:999px;padding:14px 22px;font-weight:700;font-size:14px;box-shadow:0 8px 20px #733e4322}.header-cta:hover,.button:hover{background:#5c3035}
+.hero{padding:62px 0 80px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:55px;min-height:660px}.eyebrow{text-transform:uppercase;letter-spacing:.19em;color:var(--wine);font-size:11px;font-weight:700}.hero h1{font:500 clamp(44px,5.4vw,76px)/.99 Georgia,serif;letter-spacing:-.045em;margin:20px 0 22px;max-width:630px}.hero h1 em{font-weight:400;color:var(--wine);display:block}.hero-copy{font-size:18px;line-height:1.6;color:#59625d;max-width:495px}.hero-buttons{display:flex;gap:12px;align-items:center;margin-top:30px}.button.secondary{background:transparent;color:var(--ink);box-shadow:none;border:1px solid var(--line)}.micro{margin-top:24px;color:var(--muted);font-size:12px}
+.visual{position:relative;min-height:490px;background:#e6ded2;border-radius:48% 48% 24px 24px / 40% 40% 24px 24px;overflow:hidden;box-shadow:var(--shadow)}.visual:before{content:"";position:absolute;inset:24px;border:1px solid #fff9;border-radius:48% 48% 12px 12px / 40% 40% 12px 12px}.fabric{position:absolute;inset:50px 65px 35px;background:linear-gradient(125deg,#a96062 0 18%,#844b51 18% 42%,#a96b6b 42% 68%,#774248 68%);clip-path:polygon(17% 0,86% 7%,100% 29%,83% 100%,11% 92%,0 34%);filter:drop-shadow(0 20px 16px #372c2b55)}.fabric:before,.fabric:after{content:"";position:absolute;border:1px solid #eac9a966;inset:16px 18px;clip-path:polygon(17% 0,86% 7%,100% 29%,83% 100%,11% 92%,0 34%)}.fabric:after{inset:26px 30px;border-color:#f4e6d277}.fold{position:absolute;left:47%;top:10%;height:77%;width:2px;background:linear-gradient(transparent,#e2c39b,transparent);transform:rotate(7deg)}.tape{position:absolute;right:42px;top:48px;background:var(--card);padding:13px 18px;border-radius:3px;transform:rotate(4deg);box-shadow:0 10px 24px #302b2618;color:var(--wine);font:italic 17px Georgia}.measure{position:absolute;left:22px;bottom:27px;padding:14px 17px;background:#f7f4edee;border:1px solid #fff;border-radius:3px;font-size:12px;letter-spacing:.08em;color:#49524d}.stitch{position:absolute;left:9%;right:9%;bottom:68px;border-bottom:1px dashed #f6e1bb;transform:rotate(-2deg)}.figure-caption{position:absolute;right:28px;bottom:25px;color:#625b54;font:italic 13px Georgia}
+.band{background:var(--ink);color:#f7f4ed;padding:18px 0}.band-inner{display:flex;justify-content:space-between;gap:20px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#e9e4d9}
+section{padding:94px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head h2{font:500 clamp(36px,4vw,54px)/1.05 Georgia,serif;letter-spacing:-.03em;margin:12px 0 0}.section-head p{max-width:380px;color:var(--muted);line-height:1.6;margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:var(--card);border:1px solid var(--line);padding:28px;min-height:235px;position:relative}.service-no{font:italic 14px Georgia;color:var(--rust)}.service h3{font:500 26px/1.1 Georgia,serif;margin:38px 0 11px}.service p{font-size:14px;line-height:1.55;color:var(--muted);min-height:44px}.price{font-weight:700;color:var(--wine);font-size:15px}.price small{display:block;font-weight:400;color:var(--muted);font-size:11px;margin-top:8px}
+.process{display:grid;grid-template-columns:.8fr 1.2fr;background:#e9e7de;overflow:hidden}.process-aside{padding:48px;background:var(--wine);color:white}.process-aside h2{font:500 44px/1 Georgia,serif;margin:16px 0}.process-aside p{line-height:1.65;color:#f1e2dd}.steps{padding:28px 48px}.step{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid #d0d0c5}.step:last-child{border:0}.step b{font:italic 17px Georgia;color:var(--wine)}.step h3{font-size:16px;margin:0 0 5px}.step p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+#request{background:var(--card);border-block:1px solid var(--line)}.request-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}.request-copy h2{font:500 50px/1.02 Georgia,serif;margin:14px 0 20px}.request-copy p{color:var(--muted);line-height:1.7;max-width:460px}.price-note{font-size:12px!important;border-left:2px solid var(--gold);padding-left:14px}
+form{background:var(--paper);padding:28px;border:1px solid var(--line)}label{display:block;margin-bottom:15px;font-size:12px;font-weight:700;color:#4e5852}input,textarea,select{display:block;width:100%;margin-top:7px;border:1px solid #c9ccc3;background:#fffdf8;border-radius:2px;padding:13px;font:14px Arial;color:var(--ink)}textarea{min-height:92px;resize:vertical}form button{border:0;cursor:pointer;width:100%}#draft{color:#735149;background:#f4e6da;border:1px solid #e5c9b6;padding:12px;margin:14px 0 0;font-size:13px;min-height:18px}
+footer{padding:38px 0 48px}.foot{display:flex;justify-content:space-between;gap:25px;align-items:center}.foot p{font-size:12px;color:var(--muted);line-height:1.6}.foot .brand{font-size:18px}.legal{font-size:11px;color:#7d817b;margin-top:28px;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:800px){.wrap{width:min(100% - 36px,600px)}header{height:70px}.nav{display:none}.header-cta{padding:12px 15px;font-size:12px}.hero{grid-template-columns:1fr;gap:28px;padding:45px 0 54px;min-height:auto}.hero h1{font-size:54px}.hero-copy{font-size:16px}.visual{min-height:400px}.services{grid-template-columns:1fr}.service{min-height:190px}.section-head{display:block}.section-head p{margin-top:14px}.band-inner{flex-wrap:wrap;line-height:1.7;justify-content:center;text-align:center}.process{grid-template-columns:1fr}.process-aside{padding:32px}.steps{padding:20px 28px}section{padding:65px 0}.request-grid{grid-template-columns:1fr;gap:28px}.request-copy h2{font-size:42px}.foot{align-items:flex-start;flex-direction:column}.hero-buttons{flex-wrap:wrap}.fabric{inset:45px 40px 30px}.tape{right:25px}.measure{left:15px}.visual{border-radius:44% 44% 20px 20px / 35% 35% 20px 20px}}
+@media(max-width:390px){.wrap{width:calc(100% - 28px)}.hero h1{font-size:47px}.visual{min-height:355px}.hero-buttons .button{width:100%}.section-head h2{font-size:37px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="#"><span class="brand-mark">Z</span><span>ZIFA</span></a>
+  <nav class="nav"><a href="#services">Услуги</a><a href="#process">Как работаем</a><a href="#request">Запросить расчёт</a></nav>
+  <a class="header-cta" href="https://wa.me/79093577844?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%88%D0%B8%D0%B2%20%D0%B8%D0%BB%D0%B8%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D1%8B" target="_blank" rel="noopener">Написать в WhatsApp ↗</a>
+</header>
+<main>
+<div class="wrap hero">
+  <div>
+    <div class="eyebrow">Ателье · Ульяновск</div>
+    <h1>Вещь, которая <em>сидит по-вашему.</em></h1>
+    <p class="hero-copy">Индивидуальный пошив и ремонт одежды — с вниманием к посадке, ткани и каждой детали.</p>
+    <div class="hero-buttons"><a class="button" href="#request">Обсудить задачу <span aria-hidden="true">&nbsp;↗</span></a><a class="button secondary" href="#services">Посмотреть направления</a></div>
+    <p class="micro">Льва Толстого, 38 · Ленинский район</p>
+  </div>
+  <div class="visual" role="img" aria-label="Стилизованная иллюстрация выкройки и ткани; не фотография изделия ZIFA">
+    <div class="fabric"><span class="fold"></span><span class="stitch"></span></div>
+    <div class="tape">точность в каждом шве</div><div class="measure">ВЫКРОЙКА · ПОСАДКА · ДЕТАЛИ</div><div class="figure-caption">иллюстрация-концепт</div>
+  </div>
+</div>
+<div class="band"><div class="wrap band-inner"><span>Индивидуальный пошив</span><span>Ремонт и подгонка</span><span>Запрос стоимости до начала работы</span></div></div>
+<section id="services">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">Направления</div><h2>От идеи — до точной посадки</h2></div><p>Опишите задачу и покажите референс — ателье поможет обсудить возможный вариант и расчёт.</p></div>
+  <div class="services">
+   <article class="service"><span class="service-no">01 / Пошив</span><h3>Платья на заказ</h3><p>Для изделия по индивидуальным меркам и пожеланиям.</p><div class="price">3 500 ₽ <small>Ориентир из карточки Яндекс Услуг · уточнить</small></div></article>
+   <article class="service"><span class="service-no">02 / Пошив</span><h3>Брюки на заказ</h3><p>Обсуждение посадки и изменений под вашу задачу.</p><div class="price">3 000 ₽ <small>Ориентир из карточки Яндекс Услуг · уточнить</small></div></article>
+   <article class="service"><span class="service-no">03 / Ремонт</span><h3>Ремонт и подгонка</h3><p>Укоротить, заменить деталь или привести вещь в порядок.</p><div class="price">от 500 ₽ <small>Демо-ориентир из публичного прайса · уточнить</small></div></article>
+  </div>
+ </div>
+</section>
+<section id="process" style="padding-top:0">
+ <div class="wrap process">
+  <div class="process-aside"><div class="eyebrow" style="color:#edc89b">Как это устроено</div><h2>Сначала — разговор о вещи.</h2><p>Для пошива и ремонта детали заказа зависят от ткани, сложности и нужной посадки. Итоговую стоимость важно согласовать до начала работы.</p></div>
+  <div class="steps">
+   <div class="step"><b>01</b><div><h3>Расскажите, что хотите</h3><p>Опишите изделие или проблему с вещью; можно приложить фото и референс в WhatsApp.</p></div></div>
+   <div class="step"><b>02</b><div><h3>Обсудите детали и цену</h3><p>Согласуйте материал, сроки и стоимость непосредственно с ателье.</p></div></div>
+   <div class="step"><b>03</b><div><h3>Встреча и примерка</h3><p>Адрес и время удобно уточнить перед визитом; график может меняться.</p></div></div>
+  </div>
+ </div>
+</section>
+<section id="request">
+ <div class="wrap request-grid">
+  <div class="request-copy"><div class="eyebrow">Запросить расчёт</div><h2>У каждой вещи — свои детали.</h2><p>Напишите, что нужно сшить или изменить. Эта форма показана как элемент концепта и сейчас не отправляет данные; для связи используйте WhatsApp.</p><p class="price-note">Цены в макете взяты из публичного профиля Яндекс Услуг (проверено 01.11.2026) как ориентиры, не как подтверждённая актуальная оферта ZIFA. До публикации их нужно согласовать с ателье.</p><a class="button" href="https://wa.me/79093577844?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D1%88%D0%B8%D0%B2%20%D0%B8%D0%BB%D0%B8%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D1%8B" target="_blank" rel="noopener">Открыть WhatsApp</a></div>
+  <form id="lead-form">
+   <label>Направление<select name="detail" required><option value="">Выберите направление</option><option>Пошив изделия</option><option>Ремонт одежды</option><option>Подгонка по фигуре</option><option>Другой запрос</option></select></label>
+   <label>Что хотите сделать?<textarea name="comment" placeholder="Коротко опишите изделие или задачу" required></textarea></label>
+   <label>Ваше имя<input name="name" placeholder="Как к вам обращаться"></label>
+   <button class="button" type="submit">Подготовить запрос</button>
+   <p id="draft" aria-live="polite">Демо-форма: запрос не отправлен. Напишите ателье напрямую в WhatsApp.</p>
+  </form>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">
+ <div class="foot"><a class="brand" href="#"><span class="brand-mark">Z</span><span>ZIFA</span></a><p>Ульяновск, улица Льва Толстого, 38<br><a href="https://wa.me/79093577844" target="_blank" rel="noopener">+7 (909) 357-78-44 · WhatsApp ↗</a></p><a class="button secondary" href="#request">Запросить расчёт</a></div>
+ <div class="legal">Концепт сайта для ателье ZIFA. Иллюстрация ткани условная и не является фото реального изделия. Цены в карточках — ориентиры из публичного профиля Яндекс Услуг от 01.11.2026, требуют сверки. Форма не отправляет сведения и не создаёт запись.</div>
+</div></footer>
+<script>
+document.getElementById('lead-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('draft').textContent='Демо: запрос не отправлен и не сохранён. Чтобы связаться с ателье, откройте WhatsApp.'});
+</script>
+</body>
+</html>
