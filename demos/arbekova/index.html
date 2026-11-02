@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Екатерина Арбекова — клинический психолог, Самара</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Nunito:wght@400;600;800&display=swap">
+<style>
+:root{--sky:#CFE6F2;--sea:#1F5F7A;--leaf:#5FA36A;--sun:#F4C542;--berry:#E26D5C;--paper:#FFFFFF;--ink:#183444;--soft:#EEF6FA;
+--round:"Comfortaa",system-ui,sans-serif;--body:"Nunito",system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--soft);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.concept{background:var(--sea);color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;flex-wrap:wrap}
+.logo{font:700 20px var(--round);color:var(--sea)} .logo small{display:block;font:600 13px var(--body);color:#5B7786}
+.btn{display:inline-block;background:var(--berry);color:#fff;font:800 15px var(--body);padding:14px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 4px 0 #B04E40;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)} .btn:active{transform:translateY(2px);box-shadow:0 2px 0 #B04E40}
+.btn:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.btn.alt{background:var(--paper);color:var(--sea);box-shadow:0 4px 0 var(--sky)}
+/* storybook hero */
+.hero{position:relative;background:var(--sky);border-radius:0 0 48px 48px;overflow:hidden;padding-bottom:120px}
+.hero-in{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-top:20px;position:relative;z-index:2}
+.hero h1{font:700 clamp(34px,5.5vw,60px)/1.12 var(--round);margin:0 0 18px;color:var(--sea);text-wrap:balance}
+.hero h1 mark{background:var(--sun);color:var(--ink);padding:0 .15em;border-radius:10px}
+.hero p{font-size:19px;margin:0 0 26px;max-width:30em}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hills{position:absolute;left:0;right:0;bottom:0;height:150px;z-index:1}
+.hill{position:absolute;bottom:-60px;border-radius:50%}
+.h1{left:-10%;width:70%;height:200px;background:var(--leaf)} .h2{right:-15%;width:75%;height:230px;background:#4C8F58} .h3{left:30%;width:50%;height:150px;bottom:-80px;background:#76B880}
+.scene{position:relative;aspect-ratio:1;max-width:380px;width:100%;margin:0 auto}
+.sun{position:absolute;top:6%;right:10%;width:28%;aspect-ratio:1;border-radius:50%;background:var(--sun);box-shadow:0 0 0 14px rgba(244,197,66,.3);animation:pulse 5s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 24px rgba(244,197,66,.15)}}
+.book-ill{position:absolute;left:8%;bottom:10%;width:80%;height:46%;}
+.page{position:absolute;bottom:0;width:50%;height:100%;background:var(--paper);border:4px solid var(--sea)}
+.page.l{left:0;border-radius:18px 4px 4px 18px;transform:skewY(6deg);transform-origin:right}
+.page.r{right:0;border-radius:4px 18px 18px 4px;transform:skewY(-6deg);transform-origin:left}
+.page i{display:block;height:6px;border-radius:3px;background:var(--sky);margin:18% 14% 0}
+.bird{position:absolute;top:30%;left:18%;font-size:34px;animation:fly 6s ease-in-out infinite}
+@keyframes fly{50%{transform:translate(30px,-14px) rotate(6deg)}}
+section{padding:72px 0}
+h2{font:700 clamp(28px,4vw,42px)/1.15 var(--round);color:var(--sea);margin:0 0 10px;text-wrap:balance}
+.sub{margin:0 0 32px;max-width:36em;color:#4A6676}
+/* who picker */
+.who{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.who button{font:800 16px var(--body);border:3px solid var(--sea);background:var(--paper);color:var(--sea);padding:12px 20px;border-radius:18px;cursor:pointer}
+.who button[aria-pressed="true"]{background:var(--sea);color:#fff}
+.panel{background:var(--paper);border-radius:28px;padding:30px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;box-shadow:0 6px 0 var(--sky)}
+.panel li{list-style:none;padding-left:30px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--leaf)}
+.creds{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cred{background:var(--paper);border-radius:22px;padding:22px;border-top:8px solid var(--sun)}
+.cred:nth-child(2){border-color:var(--leaf)} .cred:nth-child(3){border-color:var(--berry)} .cred:nth-child(4){border-color:var(--sea)}
+.cred b{font:700 16px var(--round);display:block;margin-bottom:6px}
+.cred p{margin:0;font-size:15px;color:#4A6676}
+.big{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.big b{font:700 clamp(64px,10vw,110px)/1 var(--round);color:var(--berry)}
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.price{background:var(--paper);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.price.hit{background:var(--sea);color:#fff}
+.price .p{font:700 30px var(--round)} .price span{font-size:14px;opacity:.85}
+.tag{align-self:flex-start;background:var(--sun);color:var(--ink);font:800 12px var(--body);padding:3px 10px;border-radius:999px}
+.bookbox{background:var(--leaf);color:#fff;border-radius:36px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.bookbox h2{color:#fff}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.seg button{flex:1;min-width:110px;font:800 15px var(--body);background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);border-radius:14px;padding:11px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--leaf);border-color:#fff}
+.lab{font:800 13px var(--body);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;opacity:.9}
+.res{margin-top:14px;background:rgba(255,255,255,.18);padding:14px;border-radius:14px;font-size:15px}.res a{color:#fff;font-weight:800}
+footer{padding:40px 0 60px;font-size:15px;color:#4A6676;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sticky{display:none}
+@media(max-width:860px){.hero-in,.bookbox{grid-template-columns:1fr}.creds,.prices{grid-template-columns:1fr 1fr}.panel{grid-template-columns:1fr}.bookbox{padding:28px 20px}section{padding:52px 0}
+.sticky{display:block;position:fixed;left:12px;right:12px;bottom:14px;text-align:center;z-index:5}body{padding-bottom:84px}.scene{max-width:280px}}
+@media(max-width:480px){.creds,.prices{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.sun,.bird{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="concept">Это демо-черновик сайта, подготовленный для Екатерины Арбековой. Не официальный сайт.</div>
+<header class="hero">
+  <div class="w">
+    <nav><div class="logo">Екатерина Арбекова<small>клинический психолог · Самара и онлайн</small></div><a class="btn alt" href="#book">Записаться</a></nav>
+    <div class="hero-in">
+      <div>
+        <h1>Психолог не лечит. Психолог <mark>помогает жить</mark></h1>
+        <p>18 лет работаю с детьми, семьями и взрослыми. Гештальт-терапия, сказкотерапия и игра, чтобы о трудном можно было говорить мягко.</p>
+        <div class="cta"><a class="btn" href="#book">Записаться на знакомство</a><a class="btn alt" href="#who">С чем приходят</a></div>
+      </div>
+      <div class="scene" aria-hidden="true"><div class="sun"></div><div class="bird">🕊️</div><div class="book-ill"><div class="page l"><i></i><i></i><i></i></div><div class="page r"><i></i><i></i><i></i></div></div></div>
+    </div>
+  </div>
+  <div class="hills" aria-hidden="true"><div class="hill h1"></div><div class="hill h2"></div><div class="hill h3"></div></div>
+</header>
+
+<div class="w">
+<section id="who">
+  <h2>Кто придёт на консультацию?</h2>
+  <p class="sub">Выберите, и я покажу, с какими вопросами ко мне обычно приходят.</p>
+  <div class="who" role="group" aria-label="Кто придёт">
+    <button type="button" aria-pressed="true" data-k="kid">Ребёнок</button><button type="button" aria-pressed="false" data-k="fam">Семья</button><button type="button" aria-pressed="false" data-k="adult">Я сам(а)</button>
+  </div>
+  <ul class="panel" id="panel"></ul>
+</section>
+
+<section>
+  <div class="big"><b>18</b><h2 style="margin:0">лет практики<br>и учусь до сих пор</h2></div>
+  <div class="creds">
+    <div class="cred"><b>Сказкотерапия</b><p>Институт комплексной сказкотерапии, Санкт-Петербург</p></div>
+    <div class="cred"><b>Гештальт-терапия</b><p>Санкт-Петербургский институт гештальт-терапии</p></div>
+    <div class="cred"><b>Клиническая психология</b><p>Магистратура, диссертация защищена в 2024</p></div>
+    <div class="cred"><b>Супервизия</b><p>Регулярная личная терапия и супервизия. Считаю это обязательным</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Стоимость</h2>
+  <p class="sub">Очно на Самарской, 146, или онлайн из любого города.</p>
+  <div class="prices">
+    <div class="price"><span class="tag">для начала</span><span>Вебинар «Школа без нервов»</span><div class="p">1 500 ₽</div></div>
+    <div class="price"><span>Сессия</span><div class="p">5 000 ₽</div><span>дети, семьи, взрослые</span></div>
+    <div class="price"><span>Парная терапия</span><div class="p">5 000 ₽</div><span>за встречу</span></div>
+    <div class="price hit"><span class="tag">выгоднее</span><span>Пакет 5 встреч</span><div class="p">20 000 ₽</div><span>экономия 5 000 ₽</span></div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="bookbox">
+    <div><h2>Консультация-знакомство</h2><p style="margin:0">Выберите формат и мессенджер. Сообщение подготовится само, останется отправить.</p></div>
+    <form id="f">
+      <div class="lab">Формат</div>
+      <div class="seg" id="fmt"><button type="button" aria-pressed="true" data-v="очно">Очно</button><button type="button" aria-pressed="false" data-v="онлайн">Онлайн</button></div>
+      <div class="lab">Куда написать</div>
+      <div class="seg" id="ch"><button type="button" aria-pressed="true" data-v="wa">WhatsApp</button><button type="button" aria-pressed="false" data-v="vk">VK</button><button type="button" aria-pressed="false" data-v="tel">Позвонить</button></div>
+      <button class="btn" type="submit" style="width:100%">Подготовить сообщение</button>
+      <div class="res" id="res" hidden></div>
+    </form>
+  </div>
+</section>
+
+<footer><span>Екатерина Арбекова · клинический психолог, гештальт-терапевт</span><span>Самара, Самарская, 146 · +7 (987) 156-97-20</span></footer>
+</div>
+<a class="btn sticky" href="#book">Записаться на знакомство</a>
+<script>
+const T={kid:["Истерики и частые скандалы","Заикание, неврозы","Трудности в садике и школе","Нет желания учиться","Психосоматика","Переходный возраст"],
+fam:["Непонимание с супругом","Конфликты с родственниками","Отношения с подростком","Парная терапия","Кризисы в семье","Как договариваться без крика"],
+adult:["Тревога и выгорание","Неуверенность в себе","Отношения с деньгами","Неудовлетворённость жизнью","Поиск призвания","Психосоматика"]};
+const panel=document.getElementById("panel");
+function show(k){panel.textContent="";T[k].forEach(t=>{const li=document.createElement("li");li.textContent=t;panel.append(li)})}
+const wb=document.querySelectorAll(".who button");wb.forEach(b=>b.onclick=()=>{wb.forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");show(b.dataset.k)});show("kid");
+const PHONE="79871569720";let fmt="очно",ch="wa";
+function seg(id,set){const bs=document.querySelectorAll("#"+id+" button");bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");set(b.dataset.v)})}
+seg("fmt",v=>fmt=v);seg("ch",v=>ch=v);
+document.getElementById("f").onsubmit=e=>{e.preventDefault();
+  const who=document.querySelector('.who button[aria-pressed="true"]').textContent;
+  const text="Здравствуйте, Екатерина! Хочу записаться на консультацию-знакомство ("+fmt+"). Запрос связан с темой «"+who+"».";
+  const r=document.getElementById("res");r.hidden=false;r.textContent="";
+  const href=ch==="wa"?"https://wa.me/"+PHONE+"?text="+encodeURIComponent(text):ch==="vk"?"https://vk.ru/arbekovapsycholog":"tel:+"+PHONE;
+  const p=document.createElement("p");p.style.margin="0 0 8px";p.textContent="«"+text+"»";
+  const a=document.createElement("a");a.href=href;a.target="_blank";a.rel="noopener";a.textContent=ch==="tel"?"Позвонить: +7 (987) 156-97-20":"Открыть "+(ch==="wa"?"WhatsApp":"VK")+" →";
+  r.append(p,a)};
+</script>
+</body>
+</html>

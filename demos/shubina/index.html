@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Анастасия Шубина — семейный психолог, Самара</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--velvet:#3B0F1E;--deep:#24070F;--gold:#E8B04B;--paper:#F7EBDD;--rose:#C8576A;--muted:#D9BFC4;
+--cond:"Oswald","Arial Narrow",sans-serif;--serif:"Lora",Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--deep);color:var(--paper);font-family:var(--serif);font-size:17px;line-height:1.6}
+.concept{background:var(--gold);color:var(--deep);font:600 13px var(--cond);letter-spacing:.06em;text-align:center;padding:8px 16px;text-transform:uppercase}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}
+/* film strip */
+.strip{height:28px;background:repeating-linear-gradient(90deg,var(--deep) 0 14px,transparent 14px 28px),#000;background-size:28px 10px,auto;background-repeat:repeat-x;background-position:0 9px;opacity:.9}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;flex-wrap:wrap}
+.logo{font:600 20px var(--cond);letter-spacing:.08em;text-transform:uppercase}
+.logo small{display:block;font:400 italic 14px var(--serif);letter-spacing:0;text-transform:none;color:var(--muted)}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);font:600 15px var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:14px 24px;border-radius:4px;border:0;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--paper)} .btn:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
+.btn.line{background:transparent;color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold)}
+.hero{background:radial-gradient(ellipse at 50% 0,#6B1A33 0,var(--velvet) 45%,var(--deep) 100%);padding:64px 0 88px;text-align:center;position:relative;overflow:hidden}
+.spot{position:absolute;left:50%;top:-40%;width:900px;height:900px;transform:translateX(-50%);background:radial-gradient(circle,rgba(232,176,75,.18),transparent 60%);pointer-events:none;animation:sway 9s ease-in-out infinite}
+@keyframes sway{50%{transform:translateX(-46%)}}
+.kicker{font:400 14px var(--cond);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font:600 clamp(40px,8vw,92px)/1 var(--cond);text-transform:uppercase;margin:16px 0 22px;letter-spacing:.01em;text-wrap:balance}
+.hero h1 em{font:italic 400 .8em var(--serif);text-transform:none;color:var(--gold)}
+.hero p{max-width:34em;margin:0 auto 32px;color:var(--muted);font-size:19px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+section{padding:80px 0}
+h2{font:600 clamp(30px,5vw,52px)/1.05 var(--cond);text-transform:uppercase;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 36px;max-width:36em}
+/* tickets */
+.tickets{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.ticket{display:grid;grid-template-columns:110px 1fr;background:var(--paper);color:var(--deep);border-radius:10px;overflow:hidden;position:relative}
+.stub{background:var(--rose);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;border-right:2px dashed var(--paper);text-align:center}
+.stub b{font:600 44px/1 var(--cond)} .stub span{font:400 13px var(--cond);letter-spacing:.15em;text-transform:uppercase}
+.tbody{padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.tbody h3{font:600 22px/1.15 var(--cond);text-transform:uppercase;margin:0}
+.tbody p{margin:0;font-size:15px}
+.tmeta{font:400 13px var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--rose)}
+.tbody .btn{align-self:flex-start;margin-top:6px;padding:10px 16px;font-size:13px;background:var(--deep);color:var(--gold)}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(232,176,75,.3);border:1px solid rgba(232,176,75,.3)}
+.fmt{background:var(--velvet);padding:32px 26px}
+.fmt b{font:600 64px/1 var(--cond);color:var(--gold);display:block}
+.fmt h3{font:600 22px var(--cond);text-transform:uppercase;margin:8px 0}
+.fmt p{margin:0;color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+.reel{aspect-ratio:4/5;max-width:100%;border-radius:12px;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 2px,transparent 2px 6px),linear-gradient(160deg,#6B1A33,var(--deep));display:grid;place-items:center;border:10px solid #000;box-shadow:0 0 0 2px var(--gold)}
+.reel span{font:600 22px var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:center;padding:20px}
+.roles{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:12px}
+.roles li{padding-left:28px;position:relative}
+.roles li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.reviews{background:var(--paper);color:var(--deep);border-radius:16px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.reviews b{font:600 clamp(56px,10vw,110px)/1 var(--cond);color:var(--rose)}
+.reviews .btn{background:var(--deep);color:var(--gold)}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--velvet);border:1px solid rgba(232,176,75,.4);border-radius:16px;padding:44px}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.seg button{flex:1;min-width:110px;background:transparent;color:var(--paper);border:1.5px solid rgba(247,235,221,.35);border-radius:6px;padding:11px;font:500 14px var(--cond);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--deep);border-color:var(--gold)}
+label{display:block;font:400 13px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.res{margin-top:14px;background:rgba(0,0,0,.25);padding:14px;border-radius:8px;font-size:15px} .res a{color:var(--gold)}
+footer{padding:40px 0 60px;color:var(--muted);font-size:15px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sticky{display:none}
+@media(max-width:820px){.tickets,.formats,.about,.book{grid-template-columns:1fr}.book{padding:28px 20px}section{padding:56px 0}
+.ticket{grid-template-columns:84px 1fr}.stub b{font-size:34px}
+.sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;text-align:center;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.4)}body{padding-bottom:80px}}
+@media(prefers-reduced-motion:reduce){.spot{animation:none}}
+</style>
+</head>
+<body>
+<div class="concept">Это демо-черновик сайта, подготовленный для Анастасии Шубиной. Не официальный сайт.</div>
+<div class="strip" aria-hidden="true"></div>
+<div class="hero">
+  <div class="spot" aria-hidden="true"></div>
+  <div class="w">
+    <nav><div class="logo">Анастасия Шубина<small>системный семейный психолог · Самара</small></div><a class="btn line" href="#book">Записаться</a></nav>
+    <div class="kicker">Семьи · пары · индивидуально</div>
+    <h1>Ваша жизнь <em>не обязана</em> идти по чужому сценарию</h1>
+    <p>Системная семейная терапия, расстановки и кинотерапия. Разбираемся, почему повторяются одни и те же сюжеты, и пишем свой.</p>
+    <div class="cta"><a class="btn" href="#book">Записаться на консультацию</a><a class="btn line" href="#afisha">Афиша встреч</a></div>
+  </div>
+</div>
+<div class="strip" aria-hidden="true"></div>
+
+<div class="w">
+<section id="afisha">
+  <h2>Афиша встреч</h2>
+  <p class="sub">Небольшие группы в уютном месте. Участие — донат. Места ограничены, лучше записаться заранее.</p>
+  <div class="tickets">
+    <article class="ticket"><div class="stub"><b>03</b><span>ноября</span><span>18:00</span></div>
+      <div class="tbody"><span class="tmeta">Кофейня «Комод», Галактионовская 130</span><h3>Почему я одна?</h3><p>Об одиночестве внутри отношений и вне их, о выборе «не тех» партнёров и страхе близости.</p><button class="btn" type="button" data-ev="«Почему я одна?» 03.11">Хочу на встречу</button></div></article>
+    <article class="ticket"><div class="stub"><b>—</b><span>скоро</span></div>
+      <div class="tbody"><span class="tmeta">Дата уточняется</span><h3>Сепарация, или путь к себе</h3><p>Про личные границы без чувства вины и про то, как перестать жить «чужую» жизнь.</p><button class="btn" type="button" data-ev="«Сепарация» (новая дата)">Сообщить о дате</button></div></article>
+  </div>
+</section>
+
+<section>
+  <h2>Как я работаю</h2>
+  <p class="sub">Три формата, в каждом свой темп.</p>
+  <div class="formats">
+    <div class="fmt"><b>1</b><h3>Индивидуально</h3><p>Одиночество, сепарация, повторяющиеся сценарии, поиск себя.</p></div>
+    <div class="fmt"><b>2</b><h3>Пары</h3><p>Когда вместе тяжело, а расставаться не хочется. Ищем, что на самом деле происходит между вами.</p></div>
+    <div class="fmt"><b>3+</b><h3>Семьи</h3><p>Отношения с родителями и взрослыми детьми, семейные сценарии через поколения.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="reel"><span>Место для вашего фото</span></div>
+  <div>
+    <h2>Обо мне</h2>
+    <ul class="roles">
+      <li>Практикующий системный семейный психолог</li>
+      <li>Расстановщик: работаю с диагностическими расстановочными техниками</li>
+      <li>Кинотерапевт: использую фильмы и образы, чтобы говорить о сложном мягче</li>
+      <li>Психолог социально-психологического центра Самарского университета</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="reviews"><div><b>150+</b><p style="margin:0">отзывов клиентов в обсуждениях VK</p></div><a class="btn" href="https://vk.ru/anastasiya_shubina_63" target="_blank" rel="noopener">Читать отзывы</a></div>
+</section>
+
+<section id="book">
+  <div class="book">
+    <div><h2>Записаться</h2><p class="sub" style="margin:0">Выберите, что вам нужно. Сообщение подготовится само, останется отправить.</p></div>
+    <form id="f">
+      <label>Что интересует</label>
+      <div class="seg" id="kind"><button type="button" aria-pressed="true" data-v="индивидуальную консультацию">Лично</button><button type="button" aria-pressed="false" data-v="консультацию для пары">Пара</button><button type="button" aria-pressed="false" data-v="семейную консультацию">Семья</button></div>
+      <label>Куда написать</label>
+      <div class="seg" id="ch"><button type="button" aria-pressed="true" data-v="wa">WhatsApp</button><button type="button" aria-pressed="false" data-v="vk">VK</button><button type="button" aria-pressed="false" data-v="tel">Позвонить</button></div>
+      <button class="btn" type="submit" style="width:100%">Подготовить сообщение</button>
+      <div class="res" id="res" hidden></div>
+    </form>
+  </div>
+</section>
+
+<footer><span>Анастасия Шубина · системный семейный психолог</span><span>Самара · +7 (906) 341-53-58</span></footer>
+</div>
+<a class="btn sticky" href="#book">Записаться</a>
+<script>
+const PHONE="79063415358";let kind="индивидуальную консультацию",ch="wa";
+function seg(id,set){const bs=document.querySelectorAll("#"+id+" button");bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");set(b.dataset.v)})}
+seg("kind",v=>kind=v);seg("ch",v=>ch=v);
+function out(text){const r=document.getElementById("res");r.hidden=false;r.textContent="";
+  const href=ch==="wa"?"https://wa.me/"+PHONE+"?text="+encodeURIComponent(text):ch==="vk"?"https://vk.ru/id426138365":"tel:+"+PHONE;
+  const p=document.createElement("p");p.style.margin="0 0 8px";p.textContent="«"+text+"»";
+  const a=document.createElement("a");a.href=href;a.target="_blank";a.rel="noopener";a.textContent=ch==="tel"?"Позвонить: +7 (906) 341-53-58":"Открыть "+(ch==="wa"?"WhatsApp":"VK")+" →";
+  r.append(p,a);r.scrollIntoView({behavior:"smooth",block:"nearest"})}
+document.getElementById("f").onsubmit=e=>{e.preventDefault();out("Здравствуйте, Анастасия! Хочу записаться на "+kind+".")};
+document.querySelectorAll("[data-ev]").forEach(b=>b.onclick=()=>{document.getElementById("book").scrollIntoView({behavior:"smooth"});out("Здравствуйте, Анастасия! Хочу на встречу "+b.dataset.ev+".")});
+</script>
+</body>
+</html>
