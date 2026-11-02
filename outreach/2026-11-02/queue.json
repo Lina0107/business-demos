@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-11-02",
+  "new_candidates": [],
+  "existing_queue_actions": [
+    {
+      "slug": "zifa",
+      "business": "Ателье ZIFA / Зифа",
+      "status": "demo_ready_contact_on_hold",
+      "stages": [
+        "found",
+        "rechecked",
+        "demo_ready",
+        "contact_recheck_hold"
+      ],
+      "demo": {
+        "source": "demos/zifa/index.html",
+        "commit": "868f22285102b239a41612b0ee5ac58cb9385f0b",
+        "screenshots": 3,
+        "run_id": "41275413223",
+        "artifact_id": "13070419621",
+        "mobileOverflow": false,
+        "form": "draft only",
+        "visualReview": "passed"
+      },
+      "contact_recheck": {
+        "phone_primary": "+7 909 357-78-44",
+        "corroboration": [
+          "https://ulyanovsk.spravka.city/company/zifa-118",
+          "https://totadres.ru/ulyanovsk/org/zifa/5921421"
+        ],
+        "conflicting_listing": "+7 909 357-70-35 at same address in UrbanPlaces category list",
+        "decision": "Do not send until contact is clarified; no official email found; no WhatsApp sending tool"
+      },
+      "sent": false
+    }
+  ],
+  "excluded": [
+    {
+      "business": "Речецветик",
+      "reason": "confirmed own website речецветик73.рф; excluded from no-site leads"
+    },
+    {
+      "business": "Cozy Studio",
+      "reason": "own site studiocozy.ru"
+    },
+    {
+      "business": "Алоха",
+      "reason": "own site aloha-english.ru"
+    },
+    {
+      "business": "Сажа",
+      "reason": "own site sazha73.ru"
+    },
+    {
+      "business": "English Room",
+      "reason": "not enough public reviews; available listing calls it new"
+    },
+    {
+      "business": "Ресторан Россия",
+      "reason": "2ГИС reviews but weak 2.9/30 in directory, no qualifying high rating"
+    }
+  ],
+  "new_demo_count": 0,
+  "new_qualified_count": 0,
+  "sent_count": 0,
+  "delivery_confirmed_count": 0,
+  "replies_found_in_gmail": 0,
+  "target_demos": 10,
+  "target_met": false
+}
