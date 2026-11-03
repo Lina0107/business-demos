@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-11-03",
+  "search_scope": [
+    "групповые занятия и пилатес",
+    "школы английского и частное обучение",
+    "кафе и банкетные площадки",
+    "мебель на заказ",
+    "фотостудии и локальная печать",
+    "ремонт/бытовые услуги"
+  ],
+  "new_candidates": [],
+  "new_qualified_count": 0,
+  "new_demo_count": 0,
+  "sent_count": 0,
+  "delivery_confirmed_count": 0,
+  "replies_found_in_gmail_7d": 0,
+  "target_demos": 10,
+  "target_met": false,
+  "existing_queue_actions": [
+    {
+      "slug": "zifa",
+      "business": "Ателье ZIFA / Зифа",
+      "status": "demo_ready_contact_on_hold",
+      "sent": false,
+      "note": "Не перепредлагать WhatsApp до прояснения. Ранее подтверждены +7 909 357-78-44 в двух каталогах и конфликтующий +7 909 357-70-35 в другом справочнике; официальная соцсеть/деловая почта и подтверждённый 2ГИС не найдены. Готовый демо-пакет не переоценивался и не рендерился повторно.",
+      "sources": [
+        "https://ulyanovsk.spravka.city/company/zifa-118",
+        "https://totadres.ru/ulyanovsk/org/zifa/5921421",
+        "https://urbanplaces.su/ru_ulyanovskaya-oblast/ulyanovsk-gorodskoj-okrug-ulyanovsk/category-masterskie-po-remontu-odezhdyi"
+      ]
+    }
+  ],
+  "excluded_checked_today": [
+    {
+      "business": "CFL, центр иностранных языков",
+      "reason": "Найден отдельный сайт english-planet.info; не кандидат «без сайта». Адрес 9 Мая, 11, справочные источники противоречат друг другу по числу отзывов/номерам; не создавался и не отправлялся.",
+      "source": "https://xn--73-emcdgdk.xn--p1ai/ulyanovsk/obrazovanie-i-nauka/yazykovye_shkoly"
+    },
+    {
+      "business": "Tabata Drive",
+      "reason": "Обнаружен официальный/ранее указанный сайт tabata-drive.ru; кроме того, каталоги расходятся между адресами Бебеля, 45 и Островского, 58. Не кандидат.",
+      "source": "https://xn--73-emcdgdk.xn--p1ai/orgs/tabata-drive"
+    },
+    {
+      "business": "Студии Stretching for You, Inside Yoga, Level Up",
+      "reason": "У Stretching for You не удалось подтвердить отдельный сайт в текущей выборке, но существует риск повтора с ранее вручную отправленным предложением студии растяжки, просмотренным получателем; не добавляла и не связывалась. Inside Yoga и Level Up имеют собственные сайты; у Inside также виден сценарий приложения.",
+      "sources": [
+        "https://yandex.com/maps/org/stretching_for_you/80708344542/",
+        "https://yandex.com/maps/org/insayd/1378014929/",
+        "https://yandex.com/maps/org/level_ap/207895418830/"
+      ]
+    },
+    {
+      "business": "Фотостудия Bloom",
+      "reason": "Яндекс Карты показывает 3,9/15 — не прошла качественный порог; соцсеть указывает другой адрес (Гончарова, 12 против Московского шоссе, 92), поэтому связь контактов сомнительна.",
+      "source": "https://yandex.com/maps/org/bloom/140263540662/"
+    },
+    {
+      "business": "Карамель, фотостудия",
+      "reason": "Карточка Яндекс Карт содержит 4,6/40, однако текущий телефон/владелец и отдельный сайт не удалось согласовать с группой ВК и справочниками; нет безопасной верификации канала для демо/контакта.",
+      "source": "https://yandex.com/maps/org/karamel/184178704000/"
+    },
+    {
+      "business": "ReFORMA Studio",
+      "reason": "Исключена: обнаружено приложение для записи; это не свободная возможность «сайт/приложение отсутствует», а иная организация/продукт с возможным совпадением названия.",
+      "source": "https://apps.apple.com/ru/app/reforma-studio/id6754951579"
+    },
+    {
+      "business": "Студии штор Shtoris / As textile / Design and sewing of curtains",
+      "reason": "Результаты Яндекса при запросах по Ульяновску перенаправляли на одноимённые карточки Москвы; исключены из-за несоответствия городу, чтобы не ошибиться с бизнесом."
+    }
+  ],
+  "screenshot_environment": {
+    "chrome_browser_available": true,
+    "new_demo_rendered": false,
+    "reason": "Ни один новый кандидат не прошёл одновременно критерии активности/репутации, идентификации контакта и проверки собственного сайта; не создавался демо-пакет для неподтверждённого получателя."
+  }
+}
