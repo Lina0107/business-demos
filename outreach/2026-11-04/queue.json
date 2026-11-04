@@ -1,0 +1,103 @@
+{
+  "checked_at": "2026-11-04",
+  "search_scope": [
+    "детские центры и логопедия",
+    "фотостудии",
+    "цветы и доставка",
+    "ремонт бытовой техники"
+  ],
+  "new_candidates": [],
+  "new_qualified_count": 0,
+  "previously_found_rechecked_count": 1,
+  "rechecked_queue": [
+    {
+      "slug": "govoryu-i-umeyu",
+      "business": "Говорю и умею",
+      "status": "demo_ready_contact_on_hold",
+      "found_in_prior_current_day_research": true,
+      "stages": [
+        "found",
+        "rechecked",
+        "demo_ready",
+        "contact_channel_hold"
+      ],
+      "address": "Ульяновск, Киевский бульвар, 16 (Заволжский район)",
+      "maps": {
+        "yandex": "https://yandex.com/maps/org/govoryu_i_umeyu/183235998450/",
+        "yandex_duplicate_same_brand": "https://yandex.com/maps/org/govoryu_i_umeyu/158195800177/",
+        "two_gis": "not_confirmed"
+      },
+      "rating": {
+        "source": "Яндекс Карты",
+        "rating": "4.6/5",
+        "ratings_count": 14,
+        "visible_review_comments": 9
+      },
+      "public_contacts": {
+        "phone_primary": "+7 917 620-05-05",
+        "phone_primary_verified_by": [
+          "Yandex Maps listing at Kiyevskiy Blvd 16",
+          "Spravker listing for same address"
+        ],
+        "secondary_directory_only": "+7 995 688-60-90",
+        "secondary_caution": "not matched to same current location; one listing ties the center to Karla Libknekhta 29; do not use until clarified",
+        "email": null,
+        "vk": null,
+        "telegram": null,
+        "whatsapp": null,
+        "instagram": null
+      },
+      "site_status": "separate_site_not_found after search by name, city, address and phone; official social pages not confirmed",
+      "benefit_assessment": "High potential: numerous directions could be organized by parent's question; request form could route inquiry to the correct direction. This is an assessment, not a stated demand.",
+      "demo": {
+        "source": "demos/govoryu-i-umeyu/index.html",
+        "source_commit": "24dac7880e51dc75040953916ec985418e1472f9",
+        "pipeline_adjustment_commit": "ac19ea6df2002206ed8f76225156ae3eb7055468",
+        "screenshots": 3,
+        "run_id": 41772656658,
+        "artifact_id": 13295616797,
+        "mobileOverflow": false,
+        "form": "draft only; test did not submit or store data",
+        "visual_review": "passed",
+        "published": false
+      },
+      "sent": false,
+      "delivery_confirmed": false,
+      "send_blocker": "Only public phone verified; no official email or verified text-message channel and no phone/SMS sending tool. No call initiated."
+    }
+  ],
+  "exclusions": [
+    {
+      "business": "Клюква, photo studio",
+      "reason": "public booking page klukva.cue.business and only 1 directory review; kept out of strong lead pool"
+    },
+    {
+      "business": "Точка Роста, children’s intensive development center",
+      "reason": "own website tochka-rosta.ru confirmed; excluded"
+    },
+    {
+      "business": "Flower businesses found in Ulyanovsk",
+      "reason": "separate websites found (ul-rose.ru, krokus73.ru, botanik73.ru); excluded"
+    },
+    {
+      "business": "appliance repair examples",
+      "reason": "separate own site master-ulyanovsk.ru or brand-specific pages found; excluded"
+    }
+  ],
+  "existing_queue_actions": [
+    {
+      "slug": "zifa",
+      "status": "contact_on_hold_not_rechecked_today",
+      "note": "Do not send or use WhatsApp until conflicting public phone numbers are resolved."
+    }
+  ],
+  "gmail_replies_found_last_7d": 0,
+  "new_demo_count": 1,
+  "target_demos": 10,
+  "target_met": false,
+  "shortfall": 9,
+  "sent_count": 0,
+  "delivery_confirmed_count": 0,
+  "browser_rendering_available": true,
+  "screenshots_artifact_expires": "2026-12-04"
+}
