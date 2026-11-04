@@ -34,7 +34,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0
 .breath{position:relative;aspect-ratio:1;max-width:400px;width:100%;margin:0 auto;display:grid;place-items:center}
 .ring{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff 0,var(--lilac) 55%,#D3C4DC 100%);transform:scale(.62);transition:transform 4s cubic-bezier(.45,0,.3,1)}
 .ring.in{transform:scale(1)} .ring.hold{transform:scale(1)} .ring.out{transform:scale(.62);transition-duration:6s}
-.breath .halo{position:absolute;inset:-6%;border-radius:50%;border:1px dashed var(--line)}
+.breath .halo{position:absolute;inset:0;border-radius:50%;border:1px dashed var(--line)}
 .breath-txt{position:relative;text-align:center;font-family:var(--serif);font-size:24px;color:var(--plum)}
 .breath-txt small{display:block;font:500 13px var(--sans);color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
 .breath button{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%)}
