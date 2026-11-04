@@ -16,7 +16,7 @@ const { pathToFileURL } = require('node:url');
   await page.goto(pathToFileURL(file).href);
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({path:path.join(out,'01-desktop.png')});
-  const selector = slug === 'ags' ? '#services' : slug === 'groomart' ? '#care' : '#request';
+  const selector = slug === 'ags' ? '#services' : slug === 'groomart' ? '#care' : slug === 'govoryu-i-umeyu' ? '#directions' : '#request';
   const section = page.locator(selector);
   if (await section.count()) await section.screenshot({path:path.join(out,'02-request.png')});
   else await page.screenshot({path:path.join(out,'02-request.png')});
