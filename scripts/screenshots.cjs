@@ -18,8 +18,11 @@ const { pathToFileURL } = require('node:url');
   await page.screenshot({path:path.join(out,'01-desktop.png')});
   const selector = slug === 'ags' ? '#services' : slug === 'groomart' ? '#care' : (slug === 'govoryu-i-umeyu' || slug === 'ritm-ulyanovsk') ? '#directions' : slug === 'anastasiya-estetique' ? '#services' : '#request';
   const section = page.locator(selector);
-  if (await section.count()) await section.screenshot({path:path.join(out,'02-request.png')});
-  else await page.screenshot({path:path.join(out,'02-request.png')});
+  if (await section.count()) {
+   await section.evaluate(el => el.scrollIntoView({block:'center', inline:'center'}));
+   await page.waitForTimeout(100);
+   await page.screenshot({path:path.join(out,'02-request.png')});
+  } else await page.screenshot({path:path.join(out,'02-request.png')});
   await page.setViewportSize({width:390,height:844});
   await page.goto(pathToFileURL(file).href);
   await page.evaluate(() => document.fonts.ready);
