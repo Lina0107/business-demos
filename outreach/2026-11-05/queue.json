@@ -1,0 +1,148 @@
+{
+  "checked_at": "2026-11-05",
+  "search_scope": [
+    "косметология",
+    "школы танцев, растяжка, пилатес и йога",
+    "частные психологи"
+  ],
+  "new_candidates": [
+    {
+      "slug": "anastasiya-estetique",
+      "business": "Anastasiya Estetique",
+      "sector": "косметология",
+      "address": "Ульяновск, Ленинский район, ул. Карла Маркса, 13А, корп. 2, офис 5, этаж 2",
+      "maps": {
+        "yandex": "https://yandex.com/maps/org/anastasiya_estetique/94609550214/",
+        "two_gis": "not_confirmed"
+      },
+      "rating": {
+        "source": "Яндекс Карты",
+        "rating": "4.5/5",
+        "ratings_count": 12,
+        "visible_review_comments": 11
+      },
+      "public_contacts": {
+        "phone": "+7 927 634-89-28",
+        "email": null,
+        "vk": "https://vk.ru/anastasiyaestetique",
+        "telegram_direct": "https://t.me/anastasiyaestetique",
+        "telegram_channel": "https://t.me/stasycosm",
+        "whatsapp": "https://wa.me/79276348928",
+        "instagram": "not confirmed (matching handle seen only on LOOKY)"
+      },
+      "site_status": "separate_site_not_found after search by name, city, address, phone and listed public socials; Maps/social/profile pages are not own website; no confirmed 2GIS card",
+      "benefit_assessment": "Potentially helpful for explaining several cosmetology directions, agreed pricing/preparation and directing a visitor to a consultation; inferred, not proven owner demand.",
+      "status": "demo_ready_pending_manual_contact",
+      "demo": {
+        "source": "demos/anastasiya-estetique/index.html",
+        "source_commit": "15bb8b32afaad43d5909f96271020f5927376efd",
+        "screenshots": 3,
+        "run_id": 41968660254,
+        "artifact_id": 13389095965,
+        "mobileOverflow": false,
+        "form": "draft only; no data transmitted or stored",
+        "visual_review": "passed",
+        "published": false
+      },
+      "sent": false,
+      "delivery_confirmed": false,
+      "send_blocker": "No email; connected sender for WhatsApp/VK/Telegram unavailable. WhatsApp prefilled draft link prepared for manual use."
+    },
+    {
+      "slug": "ritm-ulyanovsk",
+      "business": "Школа танцев «РИТМ»",
+      "sector": "танцы, растяжка, пилатес, йога",
+      "address": "Ульяновск, Ленинский район, 2-й переулок Мира, 24, этаж 1",
+      "maps": {
+        "yandex": "https://yandex.com/maps/org/ritm/1517230270/",
+        "two_gis": "not_confirmed"
+      },
+      "rating": {
+        "source": "Яндекс Карты",
+        "rating": "4.9/5",
+        "ratings_count": 33,
+        "visible_review_comments": 20
+      },
+      "public_contacts": {
+        "phone": "+7 903 339-64-22",
+        "secondary_directory_phone": "+7 963 129-90-79 (directory only)",
+        "email": null,
+        "vk": "https://vk.com/danceclubritm",
+        "telegram": null,
+        "whatsapp": null,
+        "instagram": null
+      },
+      "site_status": "separate_ulyanovsk_site_not_found by name, address, phone and official VK; same-address Sky Dance and namesake sites excluded; no confirmed 2GIS card",
+      "benefit_assessment": "Potentially helpful to sort lessons by style/age/level, present schedule/trial lesson and route wedding-dance inquiries; inferred, not proven owner demand.",
+      "status": "demo_ready_pending_manual_contact",
+      "demo": {
+        "source": "demos/ritm-ulyanovsk/index.html",
+        "source_commit": "cff57686acfc5604f5695562c70145e395c312ec",
+        "screenshots": 3,
+        "run_id": 41968660254,
+        "artifact_id": 13389095965,
+        "mobileOverflow": false,
+        "form": "draft only; no data transmitted or stored",
+        "visual_review": "passed",
+        "published": false
+      },
+      "sent": false,
+      "delivery_confirmed": false,
+      "send_blocker": "No confirmed business email and no connected VK sender. Direct community link and personal draft prepared for manual use."
+    },
+    {
+      "slug": "anna-avdanova-psychologist",
+      "business": "Психолог Анна Авданова",
+      "sector": "психологические консультации",
+      "address": "Ульяновск, ул. Спасская, 19/9, 5-й этаж",
+      "maps": {
+        "yandex": "https://yandex.com/maps/org/psikholog_avdanova_a_a_/53368313359/",
+        "two_gis": "not_confirmed"
+      },
+      "rating": {
+        "source": "Яндекс Карты",
+        "rating": "5.0/5",
+        "ratings_count": 56
+      },
+      "public_contacts": {
+        "phone": "+7 902 127-72-50",
+        "email": null,
+        "vk": null,
+        "telegram": null,
+        "whatsapp": null,
+        "instagram": null
+      },
+      "site_status": "separate site and verified public text channel not found in current search; third-party profile only, not own website",
+      "benefit_assessment": "A personal page could clearly explain consultation format, boundaries, topics, rate and first contact; inferred, not proven owner demand.",
+      "status": "rechecked_contact_hold_no_demo",
+      "sent": false,
+      "delivery_confirmed": false,
+      "send_blocker": "Only public phone confirmed; user does not want calls, and there is no verified public text channel or sending integration. No demo created."
+    }
+  ],
+  "rechecked_queue": [
+    {
+      "slug": "govoryu-i-umeyu",
+      "business": "Говорю и умею",
+      "previous_status": "demo_ready_contact_on_hold",
+      "status": "rechecked_contact_on_hold",
+      "address": "Ульяновск, Киевский бульвар, 16",
+      "maps": "https://yandex.com/maps/org/govoryu_i_umeyu/183235998450/",
+      "rating": "Яндекс Карты 4.6/5, 14 оценок",
+      "phone": "+7 917 620-05-05",
+      "new_site_found": false,
+      "verified_public_text_channel": false,
+      "sent": false
+    }
+  ],
+  "new_qualified_count": 3,
+  "new_demos_finished": 2,
+  "target_demos": 10,
+  "target_met": false,
+  "shortfall": 8,
+  "gmail_replies_found_last_7d": 0,
+  "sent_count": 0,
+  "delivery_confirmed_count": 0,
+  "browser_rendering_available": true,
+  "note": "No automatic contact to WhatsApp/VK/Telegram performed; screenshots do not attach through the prepared links. User previously clarified daily demos were not manually sent; Atelier remains already sent by assistant and is not a new recipient."
+}
