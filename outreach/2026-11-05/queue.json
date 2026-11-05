@@ -114,7 +114,7 @@
       },
       "site_status": "separate site and verified public text channel not found in current search; third-party profile only, not own website",
       "benefit_assessment": "A personal page could clearly explain consultation format, boundaries, topics, rate and first contact; inferred, not proven owner demand.",
-      "status": "rechecked_contact_hold_no_demo",
+      "status": "reserve_not_qualified_contact_hold_no_demo",
       "sent": false,
       "delivery_confirmed": false,
       "send_blocker": "Only public phone confirmed; user does not want calls, and there is no verified public text channel or sending integration. No demo created."
@@ -135,7 +135,7 @@
       "sent": false
     }
   ],
-  "new_qualified_count": 3,
+  "new_qualified_count": 2,
   "new_demos_finished": 2,
   "target_demos": 10,
   "target_met": false,
@@ -144,5 +144,27 @@
   "sent_count": 0,
   "delivery_confirmed_count": 0,
   "browser_rendering_available": true,
-  "note": "No automatic contact to WhatsApp/VK/Telegram performed; screenshots do not attach through the prepared links. User previously clarified daily demos were not manually sent; Atelier remains already sent by assistant and is not a new recipient."
+  "note": "No automatic contact to WhatsApp/VK/Telegram performed; screenshots do not attach through the prepared links. User previously clarified daily demos were not manually sent; Atelier remains already sent by assistant and is not a new recipient.",
+  "new_candidates_researched_count": 3,
+  "reserve_count": 1,
+  "existing_queue_actions": [
+    {
+      "slug": "zifa",
+      "business": "Ателье ZIFA / Зифа",
+      "status": "contact_on_hold",
+      "last_recheck": "2026-11-02",
+      "sent": false,
+      "note": "Conflicting public phone numbers remain unresolved; no WhatsApp/email send and no duplicate contact."
+    },
+    {
+      "slug": "mir-torzhestv",
+      "business": "Мир торжеств",
+      "status": "sent",
+      "sent_at": "2026-10-29",
+      "channel": "email",
+      "gmail_id": "1a18601253e5966e",
+      "delivery_confirmed": false,
+      "note": "Already sent; do not send again."
+    }
+  ]
 }
