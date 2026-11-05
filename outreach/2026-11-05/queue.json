@@ -74,7 +74,7 @@
       },
       "site_status": "separate_ulyanovsk_site_not_found by name, address, phone and official VK; same-address Sky Dance and namesake sites excluded; no confirmed 2GIS card",
       "benefit_assessment": "Potentially helpful to sort lessons by style/age/level, present schedule/trial lesson and route wedding-dance inquiries; inferred, not proven owner demand.",
-      "status": "demo_ready_pending_manual_contact",
+      "status": "demo_ready_possible_duplicate_hold_no_send",
       "demo": {
         "source": "demos/ritm-ulyanovsk/index.html",
         "source_commit": "cff57686acfc5604f5695562c70145e395c312ec",
@@ -88,7 +88,8 @@
       },
       "sent": false,
       "delivery_confirmed": false,
-      "send_blocker": "No confirmed business email and no connected VK sender. Direct community link and personal draft prepared for manual use."
+      "send_blocker": "Potential overlap with the studio user already messaged; do not send until Angelina confirms business identity. No connected VK sender.",
+      "possible_duplicate_note": "In conversation user said her attended stretch/dance studio (yoga, dance, pilates etc.) had already viewed a proposal; available context does not name it. Cannot safely rule out same business."
     },
     {
       "slug": "anna-avdanova-psychologist",
@@ -135,7 +136,7 @@
       "sent": false
     }
   ],
-  "new_qualified_count": 2,
+  "new_qualified_count": 1,
   "new_demos_finished": 2,
   "target_demos": 10,
   "target_met": false,
@@ -166,5 +167,6 @@
       "delivery_confirmed": false,
       "note": "Already sent; do not send again."
     }
-  ]
+  ],
+  "possible_duplicate_hold_count": 1
 }
