@@ -19,8 +19,9 @@ const { pathToFileURL } = require('node:url');
   const selector = slug === 'ags' ? '#services' : slug === 'groomart' ? '#care' : (slug === 'govoryu-i-umeyu' || slug === 'ritm-ulyanovsk') ? '#directions' : slug === 'anastasiya-estetique' ? '#services' : '#request';
   const section = page.locator(selector);
   if (await section.count()) {
+   await page.evaluate(() => { document.documentElement.style.scrollBehavior='auto'; });
    await section.evaluate(el => el.scrollIntoView({block:'center', inline:'center'}));
-   await page.waitForTimeout(100);
+   await page.waitForTimeout(150);
    await page.screenshot({path:path.join(out,'02-request.png')});
   } else await page.screenshot({path:path.join(out,'02-request.png')});
   await page.setViewportSize({width:390,height:844});
