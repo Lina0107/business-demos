@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-06",
+  "candidate": {
+    "slug": "detailing-ulyanovsk-rostovskaya",
+    "business": "Детейлинг Ульяновск",
+    "sector": "автодетейлинг и автомойка",
+    "address": "Ульяновск, ул. Ростовская, 12А",
+    "maps": {
+      "yandex": "https://yandex.com/maps/org/deteyling_ulyanovsk/158552557475/",
+      "two_gis": "not_confirmed"
+    },
+    "rating": {
+      "source": "Яндекс Карты",
+      "rating": "5.0/5",
+      "ratings_count": 220,
+      "review_count": 115
+    },
+    "public_contacts": {
+      "phone": "+7 927 270-77-43",
+      "email": null,
+      "vk": "not_confirmed",
+      "telegram": "not_confirmed",
+      "whatsapp": "not_confirmed",
+      "instagram": "not_confirmed"
+    },
+    "site_status": "Отдельный сайт не найден при проверке по названию, городу, адресу и телефону; в карточке Яндекс собственный сайт не указан. Проверка не доказывает абсолютного отсутствия.",
+    "benefit_assessment": "Портфолио полировки/керамики/защитной плёнки, согласованный прайс-ориентир и подготовка запроса на предварительную запись могли бы упростить выбор дорогих работ. Это оценка потенциальной пользы, не подтверждённый спрос владельца.",
+    "status": "found_rechecked_contact_hold_no_demo",
+    "demo": null,
+    "sent": false,
+    "delivery_confirmed": false,
+    "blocker": "Подтверждён только телефон. Прямые официальные текстовые каналы и деловая почта не найдены; Ангелина не хочет звонить. Отправку/звонок не выполняли."
+  },
+  "disqualifications": [
+    {
+      "business": "ZaйБокс Фуршет",
+      "reason": "найден самостоятельный сайт zaiboxfurshetulyanovsk.ru с меню, контактами и заказом; исключён из основной подборки."
+    },
+    {
+      "business": "Детский центр Я",
+      "reason": "поиск привёл к карточке из Одинцово, не Ульяновск; исключён из-за несовпадения города."
+    },
+    {
+      "business": "Selfclick",
+      "reason": "Yandex card advertises selfclick.ru; own website found."
+    },
+    {
+      "business": "Дон Карнизон",
+      "reason": "указан сайт donkarnizon.ru, отзывы не подтверждены; исключён."
+    },
+    {
+      "business": "Кухни из Ульяновска",
+      "reason": "карточка и отзывы относятся к филиалам Оренбурга, а не бизнесу в Ульяновске; исключён."
+    },
+    {
+      "business": "Шторы. Ателье",
+      "reason": "не удалось подтвердить точный адрес/контакт/самостоятельную компанию в Ульяновске; не квалифицирован."
+    }
+  ],
+  "sources": [
+    "turn503search2",
+    "turn508view2",
+    "turn515search0",
+    "turn515search1",
+    "turn502search21",
+    "turn502search24",
+    "turn503search0",
+    "turn506view1",
+    "turn509view0",
+    "turn505search3",
+    "turn514search0",
+    "turn514search3",
+    "turn511search0"
+  ]
+}
