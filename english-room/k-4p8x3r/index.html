@@ -1009,7 +1009,7 @@ function chHw(){const p=(arr,c,n)=>R(arr.filter(x=>x.cat===c)).slice(0,n).map(pl
 Лучше 3 раза в неделю по 5 минут, чем один раз долго.`}
 
 /* ================= PERSONAL HOMEWORK ================= */
-const CFG={"name": "Катя", "cham": ["y"]};
+const CFG={"name": "Катя", "cham": ["y", "c", "g"]};
 const HAS=k=>CFG.cham.includes(k);
 const stars3=st=>[1,2,3].map(i=>`<svg viewBox="0 0 34 34" class="${i<=st?'on':''}"><path d="M17 3l3.4 8.6 9.2.6-7.1 5.9 2.3 9-7.8-5-7.8 5 2.3-9-7.1-5.9 9.2-.6z"/></svg>`).join('');
 function hwSort(root,id,items,keys){let left=items.slice(),placed={},sel=null,ok=0;const missed=new Set();keys.forEach(k=>placed[k]=[]);
