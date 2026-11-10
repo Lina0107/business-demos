@@ -606,12 +606,30 @@ body:not(.inlesson) main{padding-bottom:40px}
 /* hw mode */
 body.hwmode .hubbar,body.hwmode #back,body.hwmode #tbtn,body.hwmode #timer{display:none!important}
 .memogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px;width:100%;max-width:980px}
-.memo .cham.mini{width:50px;flex:0 0 auto}
-.memo .mrow{flex-wrap:nowrap;align-items:center}.memo .mrow>svg{width:26px;height:26px;flex:0 0 auto}
+.memo .mrow{flex-wrap:nowrap;align-items:center}
 .memo .say{width:34px;height:34px;background:rgba(122,46,142,.12);color:#7A2E8E;border-color:rgba(122,46,142,.3)}
 .memo .pw .pt{color:#7A2E8E;text-shadow:none}
 .prmemo{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px;font-size:17px}
-.memo .stars svg{fill:rgba(0,0,0,.1)}
+.fillw{display:flex;align-items:center;font-family:var(--word);font-weight:700;font-size:clamp(64px,13vw,120px);line-height:1}
+.gapbox{display:inline-grid;place-items:center;min-width:1.4em;height:1.15em;margin:0 .05em;border-radius:18px;border:4px dashed var(--gc);color:var(--gc);font-size:.8em;transition:all 1s}
+.gapbox.full{border-style:solid;background:color-mix(in srgb,var(--gc) 18%,transparent);animation:pop .7s both}
+.ear{display:flex;flex-direction:column;align-items:center;gap:6px;border:0;border-radius:50%;width:150px;height:150px;justify-content:center;background:radial-gradient(circle at 35% 30%,#FFF1BF,#F5C451 60%,#C98F12);color:#2A1C5C;font-weight:800;box-shadow:0 10px 30px rgba(245,196,81,.35)}
+.ear svg{width:58px;height:58px}
+.ear.pulse{animation:earp 1.8s ease-in-out infinite}
+@keyframes earp{50%{transform:scale(1.07);box-shadow:0 0 0 14px rgba(245,196,81,.15),0 10px 30px rgba(245,196,81,.35)}}
+.pq .pw{font-size:inherit}
+.mem{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:100%;max-width:520px;margin:0 auto}
+@media (max-width:560px){.mem{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}}
+.mcardf{perspective:800px;border:0;background:none;padding:0;aspect-ratio:3/4}
+.mcardf .in{position:relative;width:100%;height:100%;transition:transform .9s cubic-bezier(.4,1.4,.5,1);transform-style:preserve-3d}
+.mcardf.up .in{transform:rotateY(180deg)}
+.mcardf .f,.mcardf .b{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;display:grid;place-items:center}
+.mcardf .f{background:linear-gradient(160deg,#3A2A7A,#1B1550);border:2px solid var(--line);box-shadow:inset 0 0 20px rgba(245,196,81,.15)}
+.mcardf .f svg{width:46%}
+.mcardf .b{transform:rotateY(180deg);background:var(--parch);border:3px solid var(--pc);padding:6px}
+.mcardf .b .pw{font-size:clamp(28px,6vw,44px)}
+.mcardf .mfig{width:100%}
+.mcardf.got .b{box-shadow:0 0 20px var(--pc)}
 
 /* teacher */
 .tnote{display:none;border:1px dashed var(--gold);border-radius:18px;padding:12px 16px;background:rgba(245,196,81,.08);font-size:15px}
@@ -866,8 +884,8 @@ const LV=['a','o','i','u','e'];
 let visited=new Set(LV);const learned=()=>LV;const pool=()=>WORDS.filter(w=>LV.includes(w.v));
 const EXC=['I','Pete','cod','dim','mad','mane','cane','rod','rode','mule','dime','bit','kit','cub','men','hen','be','so','by'];
 const good=w=>!EXC.includes(w.w)&&canRead(w.w);
-let RES=store.get('hwk_res',{});
-const saveRes=()=>store.set('hwk_res',RES);
+let RES=store.get('hwk3_res',{});
+const saveRes=()=>store.set('hwk3_res',RES);
 function setRes(id,ok,all,miss){RES[id]={ok,all,miss};saveRes();paintPath()}
 
 /* ---------- task 1: syllable type of one-syllable words ---------- */
@@ -1910,8 +1928,42 @@ function beGame(root){const rounds=shuffle([...PR,...shuffle(PR).slice(0,3)]);le
    const nx=root.querySelector('[data-nx]');if(nx)nx.onclick=()=>{if(k<rounds.length-1){k++;draw()}else beGame(root)}}
   draw()}
 
-/* ================= PERSONAL HOMEWORK v2 ================= */
-const CFG={"name": "Катя", "cham": ["y", "c", "g"], "pats": ["sh", "ch"], "pron": true, "be": false, "topic": "местоимения, sh, ch", "known": ["syl", "a", "o", "i", "u", "e", "y", "c", "g", "sh", "ch"]};
+/* ================= PERSONAL HOMEWORK v3 ================= */
+function hwFill(root,id){const base=[['fi','sh','','рыба'],['di','sh','','блюдо'],['ca','sh','','наличные'],['','sh','ell','ракушка'],['','sh','ed','сарай'],['','sh','ut','закрыть'],['lun','ch','','обед'],['ben','ch','','скамейка'],['ri','ch','','богатый'],['','ch','est','сундук'],['','ch','ase','гнаться'],['mu','ch','','много']];
+  const items=shuffle(base.filter(b=>canRead(b[0]+b[1]+b[2]))).slice(0,8);let k=0,ok=0;const miss=[];
+  function draw(ans){const it=items[k];const w=it[0]+it[1]+it[2];const right=ans===it[1];
+   root.innerHTML=`<div class="quiz"><div class="bar5">${items.map((_,i)=>`<i class="${i<k||(i===k&&ans)?'on':''}"></i>`).join('')}</div>
+    <div class="fillw"><span>${it[0]}</span><span class="gapbox ${ans?'full':''}" style="--gc:${ans?(it[1]==='sh'?'#86B6FF':'#FFB65C'):'#F5C451'}">${ans?it[1]:'?'}</span><span>${it[2]}</span></div>
+    <div class="info">${ans?`<b>${w}</b> — ${it[3]}`:'Каких стражей не хватает?'}</div>
+    <div class="qopts" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px">${['sh','ch'].map(p=>`<button class="qopt ${ans?(p===it[1]?'right':p===ans?'wrong':''):''}" style="--kc:${p==='sh'?'#86B6FF':'#FFB65C'}" data-p="${p}" ${ans?'disabled':''}><span class="pw" style="font-size:36px">${p}</span></button>`).join('')}</div>
+    <div class="row center">${ans?`${sayBtn(w)}<button class="btn gold" data-nx>${k<items.length-1?'Дальше →':'Готово!'}</button>`:''}</div></div>`;
+   $$('[data-p]',root).forEach(b=>b.onclick=()=>{if(b.dataset.p===it[1]){ok++;confetti(...center(root.querySelector('.gapbox')),40)}else miss.push(w);say(w);draw(b.dataset.p)});
+   const nx=root.querySelector('[data-nx]');if(nx)nx.onclick=()=>{if(k<items.length-1){k++;draw()}else{setRes(id,ok,items.length,miss);finish(root,ok,items.length)}}}
+  draw()}
+function hwListen(root,id){const pairs=[['ship','chip'],['shop','chop'],['shin','chin'],['cash','catch'],['sip','ship'],['sell','shell'],['sin','shin'],['mat','match']].filter(p=>p.every(canRead));
+  const rounds=shuffle(pairs).slice(0,8).map(p=>({p:shuffle(p),t:pick(p)}));let k=0,ok=0;const miss=[];
+  function draw(ans){const r=rounds[k];const right=ans===r.t;
+   root.innerHTML=`<div class="quiz"><div class="bar5">${rounds.map((_,i)=>`<i class="${i<k||(i===k&&ans)?'on':''}"></i>`).join('')}</div>
+    <button class="ear ${ans?'':'pulse'}" data-play aria-label="Послушать слово"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>Послушать</span></button>
+    <div class="pairq">${r.p.map(w=>`<button class="pq ${ans?(w===r.t?'right':w===ans?'wrong':''):''}" data-w="${w}" ${ans?'disabled':''}><span class="pw">${pw(w,['sh','tch','ch'],{hl:!!ans,col:w.includes('sh')?'#3F6FD8':'#C46A00'})}</span>${ans?`<small>${(parseW(P.sh.words+','+P.ch.words).find(x=>x.w===w)||{ru:{sip:'глоток',sell:'продавать',sin:'грех',mat:'коврик'}[w]||''}).ru}</small>`:''}</button>`).join('')}</div>
+    <div class="fb ${ans?(right?'ok':'bad'):''}">${ans?(right?'Верно! Ты услышала ':'Прозвучало ')+`<b>${r.t}</b>.`:'Нажми на динамик, послушай и выбери слово, которое услышала.'}</div>
+    <div class="row center">${ans?`<button class="btn gold" data-nx>${k<rounds.length-1?'Дальше →':'Готово!'}</button>`:''}</div></div>`;
+   root.querySelector('[data-play]').onclick=()=>say(r.t);
+   $$('[data-w]',root).forEach(b=>b.onclick=()=>{if(b.dataset.w===r.t){ok++;confetti(...center(b),30)}else miss.push(r.t);draw(b.dataset.w)});
+   const nx=root.querySelector('[data-nx]');if(nx)nx.onclick=()=>{if(k<rounds.length-1){k++;draw();setTimeout(()=>say(rounds[k].t),300)}else{setRes(id,ok,rounds.length,miss);finish(root,ok,rounds.length)}};
+   if(!ans&&k===0&&!root._played){root._played=1}}
+  draw()}
+function hwMemory(root,id){const ps=['I','he','she','it','we','they'].map(prOf);
+  let cards=shuffle([...ps.map(p=>({p:p.w,kind:'pic'})),...ps.map(p=>({p:p.w,kind:'word'}))]);let open=[],done=new Set(),miss=0,lock=false;
+  function draw(){root.innerHTML=`<div class="mem">${cards.map((c,i)=>{const p=prOf(c.p);const up=open.includes(i)||done.has(c.p);return `<button class="mcardf ${up?'up':''} ${done.has(c.p)?'got':''}" data-i="${i}" style="--pc:${p.col}" aria-label="Карточка"><div class="in"><div class="f"><svg viewBox="0 0 40 40"><path d="M20 4l4.5 11 12 .8-9.2 7.6 3 11.6L20 28.6 9.7 35l3-11.6L3.5 15.8l12-.8z" fill="#F5C451"/></svg></div><div class="b">${c.kind==='pic'?`<div class="mfig">${figSVG(p.fig,p.col)}</div>`:`<span class="pw" style="color:${p.col}">${p.w}</span>`}</div></div></button>`}).join('')}</div>
+    <div class="row center"><span class="score">Пар найдено: <b>${done.size}</b> из 6 · Промахов: ${miss}</span></div>`;
+   $$('[data-i]',root).forEach(b=>b.onclick=()=>{const i=+b.dataset.i;if(lock||open.includes(i)||done.has(cards[i].p))return;open.push(i);if(cards[i].kind==='word')say(cards[i].p);
+     if(open.length===2){const [a,c]=open;if(cards[a].p===cards[c].p&&cards[a].kind!==cards[c].kind){done.add(cards[a].p);open=[];draw();confetti(...center(root.querySelector(`[data-i="${c}"]`)),30);
+        if(done.size===6){const okp=Math.max(0,6-Math.floor(miss/2));setRes(id,okp,6,miss>2?['местоимения: '+miss+' промахов']:[]);setTimeout(()=>finish(root,okp,6),1200)}}
+       else{miss++;lock=true;draw();setTimeout(()=>{open=[];lock=false;draw()},1100)}}else draw()})}
+  draw()}
+
+const CFG={"name": "Катя", "cham": [], "pats": ["sh", "ch"], "pron": true, "topic": "sh, ch, местоимения", "known": ["syl", "a", "o", "i", "u", "e", "y", "c", "g", "sh", "ch"]};
 const HAS=k=>CFG.cham.includes(k);
 const KS=new Set(CFG.known);
 const stars3=st=>[1,2,3].map(i=>`<svg viewBox="0 0 34 34" class="${i<=st?'on':''}"><path d="M17 3l3.4 8.6 9.2.6-7.1 5.9 2.3 9-7.8-5-7.8 5 2.3-9-7.1-5.9 9.2-.6z"/></svg>`).join('');
@@ -1964,9 +2016,9 @@ function readAloud(root,id,list){let k=0,ok=0,shown=false;const miss=[];
       if(k<list.length-1){k++;shown=false;draw()}else{setRes(id,ok,list.length,miss);finish(root,ok,list.length)}})}
   draw()}
 function readListK(){const out=[];
-  CFG.pats.forEach(pid=>{const d=P[pid];shuffle(pickR(parseW(d.words),w=>w.w,4)).slice(0,3).forEach(w=>out.push({say:w.w,hl:pw(w.w,d.pats,{hl:true,col:NODE[pid].col}),info:`${d.lbl} = ${d.snd} · ${w.ru}`,hint:`Найди буквы ${d.lbl.split(' ')[0]} и читай их одним звуком.`}))});
-  shuffle([...(HAS('c')?CW:[]),...(HAS('g')?GW:[]),...(HAS('y')?YW:[])].filter(it=>canRead(plain(it)))).slice(0,3).forEach(it=>out.push({say:plain(it),hl:lw(it,{hl:true,nb:true,split:true,col:true}),info:CATS[it.cat].n+' · '+it.ru,hint:'Найди хамелеона и посмотри, где он сидит.'}));
-  shuffle(WORDS.filter(w=>good(w))).slice(0,2).forEach(w=>out.push({say:w.w,hl:wordHTML(w),info:K[w.t].n+' · '+snd(w)+' · '+w.ru,hint:'Прочитай слово вслух.'}));
+  CFG.pats.forEach(pid=>{const d=P[pid];shuffle(pickR(parseW(d.words),w=>w.w,4)).slice(0,5).forEach(w=>out.push({say:w.w,hl:pw(w.w,d.pats,{hl:true,col:NODE[pid].col}),info:`${d.lbl} = ${d.snd} · ${w.ru}`,hint:`Найди буквы ${d.lbl.split(' ')[0]} и читай их одним звуком.`}))});
+  shuffle([...(HAS('c')?CW:[]),...(HAS('g')?GW:[]),...(HAS('y')?YW:[])].filter(it=>canRead(plain(it)))).slice(0,0).forEach(it=>out.push({say:plain(it),hl:lw(it,{hl:true,nb:true,split:true,col:true}),info:CATS[it.cat].n+' · '+it.ru,hint:'Найди хамелеона и посмотри, где он сидит.'}));
+  shuffle(WORDS.filter(w=>good(w))).slice(0,0).forEach(w=>out.push({say:w.w,hl:wordHTML(w),info:K[w.t].n+' · '+snd(w)+' · '+w.ru,hint:'Прочитай слово вслух.'}));
   if(CFG.pron)shuffle(PR.filter(p=>!PRI.has(p.w)&&canRead(p.w))).slice(0,3).forEach(p=>out.push({say:p.w,hl:`<span class="pw" style="color:${p.col}">${p.w}</span>`,info:p.w+' — '+p.ru.split(':')[0],hint:'Прочитай и скажи, что это значит.'}));
   return shuffle(out)}
 const memoCham=()=>{let h='';
@@ -1982,8 +2034,8 @@ const memoPats=()=>CFG.pats.map(pid=>{const d=P[pid];return `<div class="memo"><
    <div class="mrow"><span class="pw on" style="--cc:#7A2E8E;font-size:34px"><span class="pt">${d.lbl.split(' ')[0]}</span></span><span>читается одним звуком <b>${d.snd}</b>: ${parseW(d.words).filter(w=>KS.has('ch')||!w.w.includes('tch')).slice(0,3).map(w=>`<b>${w.w}</b> ${sayBtn(w.w)}`).join(' ')}</span></div>
    ${pid==='ch'?'<div class="mrow"><span>На конце после короткой гласной пишут <b>tch</b>: match, catch.</span></div>':''}</div>`}).join('');
 const memoPron=()=>CFG.pron?`<div class="memo"><h3>Местоимения</h3><div class="prmemo">${PR.map(p=>`<span><b>${p.w}</b> ${sayBtn(p.w)} — ${p.ru.split(':')[0]}</span>`).join('')}</div>
-   ${CFG.be?'<div class="mrow"><span><b>I am</b> · <b>he / she / it is</b> · <b>you / we / they are</b></span></div>':''}</div>`:'';
-const NAMES={tcg:'Буквы C и G',tsh:'SH или CH?',tpr:'Замени имя',tbe:'am · is · are',t5:'Читаем вслух'};
+</div>`:'';
+const NAMES={tsh:'Шипучка или чихалка?',tfill:'Стражи потерялись',tear:'Поймай звук',tpr:'Кто это?',tmem:'Мемори',t5:'Читаем вслух'};
 const TL=[];
 TL.push({id:'intro',ch:'Памятка',r:el=>{el.classList.add('cover');el.innerHTML=`
   <svg class="crown" viewBox="0 0 120 90"><path d="M8 80 16 24l26 26 18-40 18 40 26-26 8 56z" fill="#F5C451"/><circle cx="16" cy="22" r="6" fill="#FF7E94"/><circle cx="60" cy="8" r="7" fill="#86B6FF"/><circle cx="104" cy="22" r="6" fill="#72E6AC"/><rect x="8" y="76" width="104" height="10" rx="4" fill="#E2A92A"/></svg>
@@ -1992,13 +2044,11 @@ TL.push({id:'intro',ch:'Памятка',r:el=>{el.classList.add('cover');el.inne
   <div class="memogrid">${memoPats()}${memoPron()}${memoCham()}</div>
   <div class="parents"><b>Для родителей.</b> 15 минут, можно разбить на два дня: прогресс сохраняется на этом устройстве. Ребёнок делает задания сам, ответы проверяются автоматически. Помощь нужна только в последнем задании: ребёнок читает вслух, а вы отмечаете «прочитала сама» или «было трудно». Кнопка с динамиком озвучивает слово компьютерным голосом — это подсказка, а не эталон. В конце нажмите «Скопировать результат» и отправьте учителю.</div>
   <button class="btn gold" data-go-next style="font-size:20px;padding:14px 30px">Начать!</button>`}});
-if(CFG.pats.includes('sh')&&CFG.pats.includes('ch'))TL.push({id:'tsh',ch:NAMES.tsh,r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание · стражи держатся за руки</div><h2 class="st">SH или CH?</h2></div>${narr('<b>sh</b> шипит «ш-ш», а <b>ch</b> чихает «ч». Нажми на слово, прочитай его и отправь в нужный замок.','#86B6FF','#FFB65C')}<div id="q" class="grow"></div>`;hwPatSort($('#q',el),'tsh','ch')}});
-if(CFG.pron){TL.push({id:'tpr',ch:NAMES.tpr,r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание · местоимения</div><h2 class="st">Замени имя</h2></div>${narr('Кто на картинке? Девочка — <b>she</b>, мальчик — <b>he</b>, предмет или зверёк — <b>it</b>, много — <b>they</b>, а если среди них ты — <b>we</b>.','#86B6FF','#FFB65C')}<div id="q" class="grow"></div>`;hwPr($('#q',el),'tpr')}});
- if(CFG.be)TL.push({id:'tbe',ch:NAMES.tbe,r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание · волшебные пары</div><h2 class="st">am · is · are</h2></div>${narr('<b>I am</b>, <b>he / she / it is</b>, <b>you / we / they are</b>. Вставь пропущенное слово!','#C9A2FF','#72E6AC')}<div id="q" class="grow"></div>`;hwBe($('#q',el),'tbe')}})}
-if(HAS('c')||HAS('g'))TL.push({id:'tcg',ch:NAMES.tcg,r:el=>{const keys=[...(HAS('c')?['k','s']:[]),...(HAS('g')?['g','dj']:[])];
-  el.innerHTML=`<div><div class="eyebrow">Повторение · хамелеоны</div><h2 class="st">Кто перекрасил букву?</h2></div>${narr('Смотри на соседку справа. E, I или Y — волшебная соседка, она меняет голос буквы!','#5EE3E0','#86B6FF')}<div id="q" class="grow"></div>`;
-  const it=[...(HAS('c')?[...shuffle(CW.filter(x=>x.cat==='k')).slice(0,2),...shuffle(CW.filter(x=>x.cat==='s')).slice(0,2)]:[]),...(HAS('g')?[...shuffle(GW.filter(x=>x.cat==='g')).slice(0,2),...shuffle(GW.filter(x=>x.cat==='dj')).slice(0,2)]:[])];
-  hwSort($('#q',el),'tcg',shuffle(it),keys)}});
+TL.push({id:'tsh',ch:'Шипучка или чихалка?',r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание 1 · стражи держатся за руки</div><h2 class="st">Шипучка или чихалка?</h2></div>${narr('<b>sh</b> — шипучка: шипит, как змейка, «ш-ш-ш». <b>ch</b> — чихалка: чихает «ч-ч-чих!». Нажми на слово, прочитай его и отправь в нужный замок.','#86B6FF','#FFB65C')}<div id="q" class="grow"></div>`;hwPatSort($('#q',el),'tsh','ch')}});
+TL.push({id:'tfill',ch:'Вставь стражей',r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание 2</div><h2 class="st">Стражи потерялись!</h2></div>${narr('Из слова убежали двое стражей. Кого вернуть: шипучку <b>sh</b> или чихалку <b>ch</b>? Прочитай оба варианта шёпотом и выбери настоящее слово.','#FFB65C','#C9A2FF')}<div id="q" class="grow"></div>`;hwFill($('#q',el),'tfill')}});
+TL.push({id:'tear',ch:'Поймай звук',r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание 3 · слушаем</div><h2 class="st">Поймай звук</h2></div>${narr('Слова-близнецы отличаются одним звуком: <b>ship</b> и <b>chip</b>. Нажми на большой динамик, послушай внимательно и выбери слово, которое прозвучало. Можно слушать сколько угодно раз!','#5EE3E0','#86B6FF')}<div id="q" class="grow"></div>`;hwListen($('#q',el),'tear')}});
+TL.push({id:'tpr',ch:'Кто это?',r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание 4 · местоимения</div><h2 class="st">Кто это?</h2></div>${narr('Кто на картинке? Девочка — <b>she</b>, мальчик — <b>he</b>, предмет или зверёк — <b>it</b>, много — <b>they</b>, а если среди них ты — <b>we</b>.','#86B6FF','#FFB65C')}<div id="q" class="grow"></div>`;hwPr($('#q',el),'tpr')}});
+TL.push({id:'tmem',ch:'Мемори',r:el=>{el.innerHTML=`<div><div class="eyebrow">Испытание 5 · игра на память</div><h2 class="st">Волшебное мемори</h2></div>${narr('Переворачивай по две звёздные карточки. Найди пары: картинку и слово, которое к ней подходит. Например, девочка и <b>she</b>. Запоминай, где что лежит!','#C9A2FF','#72E6AC')}<div id="q" class="grow"></div>`;hwMemory($('#q',el),'tmem')}});
 TL.push({id:'t5',ch:'Читаем',r:el=>{el.innerHTML=`<div><div class="eyebrow">Последнее испытание · вместе со взрослым</div><h2 class="st">Читаем вслух</h2></div>${narr('Прочитай каждое слово вслух. Подсказку открывай, только если совсем не получается.','#72E6AC','#FFB65C')}<div id="q" class="grow"></div>`;readAloud($('#q',el),'t5',readListK())}});
 TL.push({id:'report',ch:'Итог',r:el=>{const ids=TL.map(x=>x.id).filter(i=>NAMES[i]);const done=ids.filter(i=>RES[i]);const tot=done.reduce((a,i)=>a+RES[i].ok,0),all=done.reduce((a,i)=>a+RES[i].all,0);const miss=[...new Set(done.flatMap(i=>RES[i].miss||[]))];
   const text=`ДЗ «Свиток: ${CFG.name}» (${CFG.topic})\n`+ids.map(i=>`${NAMES[i]}: ${RES[i]?RES[i].ok+' из '+RES[i].all:'не сделано'}`).join('\n')+`\nВсего: ${tot} из ${all}`+(miss.length?`\nОшибки: ${miss.join(', ')}`:'');
@@ -2012,8 +2062,8 @@ TL.push({id:'report',ch:'Итог',r:el=>{const ids=TL.map(x=>x.id).filter(i=>NA
     try{navigator.clipboard.writeText(text).then(()=>{b.textContent='Скопировано!';setTimeout(()=>b.textContent='Скопировать результат для учителя',1800)},sel)}catch(x){sel()}}}});
 TL.forEach(x=>x.known=KS);
 SLIDES=TL;lessonIds=[];view='lesson';document.body.classList.add('inlesson','hwmode');$('#hub').hidden=true;$('#lessonUI').hidden=false;
-idx=Math.min(store.get('hwk_idx',0),SLIDES.length-1);
-const _render=render;render=function(){store.set('hwk_idx',idx);_render();$('#lessonTitle').textContent='Домашнее задание';
+idx=Math.min(store.get('hwk3_idx',0),SLIDES.length-1);
+const _render=render;render=function(){store.set('hwk3_idx',idx);_render();$('#lessonTitle').textContent='Домашнее задание';
   $('#path').innerHTML=SLIDES.map((x,i)=>`<button class="dot ${RES[x.id]?'done':''} ${i===idx?'cur':''}" data-i="${i}" title="${x.ch}"><i></i></button>`).join('');$('#cnt').textContent=SLIDES[idx].ch};
 render();
 
