@@ -564,6 +564,44 @@ body:not(.inlesson) main{padding-bottom:40px}
 .hleft{font-size:54px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .chkpot .pot{margin:0 auto}
 
+
+/* pronouns */
+.fig{width:100%;height:auto;overflow:visible;display:block}
+.figit{width:100%;max-width:220px;margin:0 auto}
+.parade{display:flex;gap:10px;justify-content:center;align-items:flex-end;flex-wrap:wrap}
+.parade .pf{width:110px;animation:rise .8s both, hover 4s ease-in-out infinite}
+.prstage{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:20px;align-items:center;border-radius:26px;padding:16px;background:color-mix(in srgb,var(--pc) 10%,transparent);border:1px solid color-mix(in srgb,var(--pc) 45%,transparent);transition:background 1.2s,border-color 1.2s}
+@media (max-width:700px){.prstage{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}}
+.prfig{width:100%;max-width:280px;animation:pop .8s both}
+.prinfo{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+@media (max-width:700px){.prinfo{align-items:center}}
+.prw{font-family:var(--word);font-weight:700;font-size:clamp(70px,13vw,120px);line-height:1;color:var(--pc);text-shadow:0 0 30px color-mix(in srgb,var(--pc) 60%,transparent);animation:pop .8s both}
+.prru{font-size:24px;font-weight:800}
+.prtip{font-size:17px;color:var(--gold2)}
+.prex{font-size:20px}
+.prcards{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.prc{min-width:92px;border-radius:18px;padding:10px 14px;display:flex;flex-direction:column;align-items:center;border:2px solid color-mix(in srgb,var(--pc) 55%,transparent);background:color-mix(in srgb,var(--pc) 12%,transparent);transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
+.prc span{font-family:var(--word);font-weight:700;font-size:30px;color:var(--pc)}
+.prc small{font-size:13px;color:var(--muted)}
+.prc.cur{transform:translateY(-6px);background:color-mix(in srgb,var(--pc) 28%,transparent)}
+.prpic{width:min(260px,70vw);margin:0 auto}
+.morph{position:relative;height:1.2em;font-family:var(--word);font-weight:700;font-size:clamp(56px,11vw,100px);line-height:1.2;min-width:6ch;text-align:center}
+.morph span{position:absolute;inset:0;transition:opacity 1.4s ease,transform 1.4s ease,filter 1.4s ease}
+.morph .m2{opacity:0;transform:scale(.6);filter:blur(8px)}
+.morph.on .m1{opacity:0;transform:scale(1.4);filter:blur(8px)}
+.morph.on .m2{opacity:1;transform:none;filter:none}
+.qopts.four{grid-template-columns:repeat(4,minmax(0,1fr));max-width:820px}
+@media (max-width:620px){.qopts.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bepairs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.bepairs{grid-template-columns:minmax(0,1fr)}}
+.bep{border-radius:22px;padding:14px;text-align:center;display:grid;gap:4px;background:color-mix(in srgb,var(--pc) 14%,transparent);border:1px solid color-mix(in srgb,var(--pc) 55%,transparent)}
+.bep b{font-family:var(--word);font-size:44px;color:var(--pc)}
+.bep span{font-family:var(--word);font-weight:700;font-size:24px}
+.bep small{color:var(--muted)}
+.beslot{display:inline-block;min-width:2.4em;border-bottom:4px dashed var(--gold);color:var(--gold2)}
+.beslot.full{border-bottom-style:solid;animation:pop .6s both}
+.chkfig{display:block;width:min(240px,60vw);margin:0 auto}
+
 /* teacher */
 .tnote{display:none;border:1px dashed var(--gold);border-radius:18px;padding:12px 16px;background:rgba(245,196,81,.08);font-size:15px}
 body.teacher .tnote{display:block}
@@ -1515,10 +1553,11 @@ function basicSlides(id){
     return [...vowelSlides(id),checkSlide(id,()=>[...shuffle(ws).slice(0,6).map(w=>({html:`<span class="word">${w.w}</span>`,say:w.w,info:K[w.t].n+' · '+snd(w)+' · '+w.ru})),...shuffle([...M.closed,...M.open,...M.magic]).slice(0,2).map(sp=>({html:`<span class="word">${gWord(sp).word}</span>`,say:gWord(sp).word,info:sp+' · '+(RU[gWord(sp).word]||'')}))])]}
   const pick3={y:['y1','y2','y3','y4'],c:['c1','c2'],g:['g1','g2']}[id];const src0={y:YW,c:CW,g:GW}[id];const src={slice:()=>pickR(src0,plain,6)};
   return [...pick3.map(x=>SL.find(s=>s.id===x)),checkSlide(id,()=>shuffle(src.slice()).slice(0,8).map(it=>({html:lw(it),say:plain(it),info:CATS[it.cat].n+' · '+it.ru})))]}
-function slidesFor(id){return id==='colors'?colorSlides():P[id]?patternSlides(id):basicSlides(id)}
+function slidesFor(id){return id==='pron'?pronSlides():id==='colors'?colorSlides():P[id]?patternSlides(id):basicSlides(id)}
 const REVIEW=['rev','rev1','rev2','rev3'];
 function hwText(ids){let t=`Домашнее задание по английскому (10 минут)\nТемы: ${ids.map(i=>NODE[i].title).join(', ')}\n\n`;let n=1;
-  ids.forEach(id=>{if(id==='colors'){t+=`${n++}. Цвета. Повтори вслух: ${COLS.map(c=>c.w).join(', ')}.\n   Найди дома 5 предметов разных цветов и скажи про каждый: It’s red! It’s blue!\n   Смешай краски (гуашь или карандаши) и скажи: Red and yellow make orange!\n\n`;return}
+  ids.forEach(id=>{if(id==='pron'){t+=`${n++}. Местоимения: I (я), you (ты), he (он), she (она), it (оно), we (мы), they (они).\n   Покажи каждое жестом и скажи вслух.\n   Замени имя: Mum → ?, Dad → ?, a cat → ?, Mum and Dad → ?, Mum and I → ?\n   Скажи: I am happy. He is Tom. She is Anna. We are friends. They are happy.\n\n`;return}
+   if(id==='colors'){t+=`${n++}. Цвета. Повтори вслух: ${COLS.map(c=>c.w).join(', ')}.\n   Найди дома 5 предметов разных цветов и скажи про каждый: It’s red! It’s blue!\n   Смешай краски (гуашь или карандаши) и скажи: Red and yellow make orange!\n\n`;return}
    if(P[id]){const d=P[id];const ws=shuffle(pickR(parseW(d.words),w=>w.w,4)).slice(0,6).map(w=>w.w).concat(shuffle(parseW(d.long).filter(w=>canRead(plainS(w.w)))).slice(0,2).map(w=>w.w));
      t+=`${n++}. ${d.lbl}: читается ${d.snd.replace(/<[^>]+>/g,'')}. Найди ${d.lbl} в каждом слове и прочитай:\n   ${ws.join(', ')}\n`;{const ph=d.phrases.filter(phraseOK);if(ph.length)t+=`   Фраза: ${pick(ph)}\n`}t+='\n'}
    else if(id==='y'||id==='c'||id==='g'){const src={y:YW,c:CW,g:GW}[id];t+=`${n++}. ${NODE[id].title}: прочитай и скажи, каким голосом говорит буква:\n   ${shuffle(pickR(src,plain,6)).slice(0,8).map(plain).join(', ')}\n\n`}
@@ -1581,7 +1620,7 @@ function renderHub(){const hub=$('#hub');const s=curStudent();if(s&&s.id!==curId
      ${s?(confirmDel?`<div class="row" style="font-size:14px"><span class="muted">Удалить дерево — ${esc(s.name)} — навсегда?</span><button class="btn sm bad" data-delyes>Удалить</button><button class="btn sm" data-delno>Отмена</button></div>`:`<button class="linkb" data-delask>удалить это дерево</button>`):''}
      ${dbNote}</div>
     ${det}
-    <div class="sbox"><h3>Сундук слов</h3><p class="muted" style="font-size:15px">Темы со словами: учим новые слова и говорим.</p>${Object.keys(TOPICS).map(id=>`<div class="topic" style="--fc:${NODE[id].col}"><span class="tdots">${COLS.slice(0,6).map(c=>`<i style="background:${c.c}"></i>`).join('')}</span><span class="tname">${NODE[id].title}</span><span class="stchip st-${prog(s,id)}">${ST_N[prog(s,id)]}</span><div class="row"><button class="btn sm gold" data-open="${id}">Открыть урок</button><button class="btn sm" data-plan="${id}">${plan.includes(id)?'✓ в плане':'+ в план'}</button><button class="btn sm" data-node="${id}">Отметить</button></div></div>`).join('')}</div>
+    <div class="sbox"><h3>Сундук слов</h3><p class="muted" style="font-size:15px">Темы со словами: учим новые слова и говорим.</p>${Object.keys(TOPICS).map(id=>`<div class="topic" style="--fc:${NODE[id].col}"><span class="tdots">${(NODE[id].dots||[]).map(c=>`<i style="background:${c}"></i>`).join('')}</span><span class="tname">${NODE[id].title}</span><span class="stchip st-${prog(s,id)}">${ST_N[prog(s,id)]}</span><div class="row"><button class="btn sm gold" data-open="${id}">Открыть урок</button><button class="btn sm" data-plan="${id}">${plan.includes(id)?'✓ в плане':'+ в план'}</button><button class="btn sm" data-node="${id}">Отметить</button></div></div>`).join('')}</div>
     <div class="sbox"><h3>План урока</h3><p class="muted" style="font-size:15px">Нажми на плод и «В план урока». Уроки пройдут подряд, в конце — ДЗ для мамы.</p>
      <label class="chk"><input type="checkbox" id="prev-chk" ${planRev?'checked':''}> Начать с разминки-повторения</label>
      <div class="planl">${plan.length?plan.map((id,i)=>`<span class="pchip" style="--fc:${NODE[id].col}">${i+1}. ${NODE[id].lbl}<button data-unplan="${id}" aria-label="Убрать">×</button></span>`).join(''):'<span class="muted">Пока пусто</span>'}</div>
@@ -1750,6 +1789,116 @@ function hunt(root){let c=null,tm=null;
     <div class="row center">${sayBtn('Find something '+c.w)}<button class="btn ok" data-found>Нашла!</button><button class="btn gold" data-new>Другой цвет</button></div></div>`;
    root.querySelector('[data-found]').onclick=e=>{clearInterval(tm);confetti(...center(e.currentTarget),90);say("It's "+c.w+"!")};root.querySelector('[data-new]').onclick=start}
   start()}
+
+/* ================= WORD CHEST: PRONOUNS ================= */
+const PR=[
+ {w:'I',ru:'я',col:'#F5C451',fig:'me',be:'am',ex:'I am happy.',exr:'Я счастлива.',tip:'Покажи пальцем на себя'},
+ {w:'you',ru:'ты, вы',col:'#86B6FF',fig:'you',be:'are',ex:'You are my friend.',exr:'Ты мой друг.',tip:'Покажи на того, с кем говоришь (в камеру!)'},
+ {w:'he',ru:'он',col:'#5EE3E0',fig:'boy',be:'is',ex:'He is Tom.',exr:'Он — Том.',tip:'Покажи на мальчика'},
+ {w:'she',ru:'она',col:'#FF8FCB',fig:'girl',be:'is',ex:'She is Anna.',exr:'Она — Анна.',tip:'Покажи на девочку'},
+ {w:'it',ru:'оно: предмет или животное',col:'#72E6AC',fig:'it',be:'is',ex:'It is a cat.',exr:'Это кошка.',tip:'Покажи на игрушку или питомца'},
+ {w:'we',ru:'мы',col:'#FFB65C',fig:'we',be:'are',ex:'We are friends.',exr:'Мы друзья.',tip:'Обведи рукой себя и друзей'},
+ {w:'they',ru:'они',col:'#C9A2FF',fig:'they',be:'are',ex:'They are happy.',exr:'Они счастливы.',tip:'Покажи на группу людей'}];
+const PRI=new Set(['you','they']);
+const prOf=w=>PR.find(x=>x.w===w);
+TOPICS.pron={lbl:'местоим.',title:'Местоимения · Pronouns',snd:'7 новых слов',ex:'I, you, he, she, it, we, they',col:'#86B6FF',dots:PR.map(p=>p.col)};
+NODE.pron=Object.assign({id:'pron',branch:'words',bn:'Сундук слов'},TOPICS.pron);
+TOPICS.colors.dots=COLS.slice(0,6).map(c=>c.c);
+function person(kind,x,col,s){s=s||1;const girl=kind==='girl'||kind==='woman';const adult=kind==='man'||kind==='woman';const h=adult?1.15:1;
+  const skin='#FFD9C2',hair=girl?'#8A4B2A':'#3B2A1E';
+  return `<g transform="translate(${x} ${adult?-14:0}) scale(${s*h})">
+   ${girl?`<path d="M-17 -22 q-6 22 2 34 M17 -22 q6 22 -2 34" stroke="${hair}" stroke-width="7" fill="none" stroke-linecap="round"/>`:''}
+   <circle cx="0" cy="-26" r="16" fill="${skin}"/>
+   <path d="${girl?'M-16 -30 q0 -16 16 -16 q16 0 16 16 q-8 -8 -16 -6 q-8 -2 -16 6z':'M-16 -28 q2 -18 16 -18 q14 0 16 18 q-6 -8 -16 -8 q-10 0 -16 8z'}" fill="${hair}"/>
+   <circle cx="-5.5" cy="-25" r="2.2" fill="#2A1C5C"/><circle cx="5.5" cy="-25" r="2.2" fill="#2A1C5C"/><path d="M-5 -18 q5 4 10 0" stroke="#C0506A" stroke-width="2" fill="none" stroke-linecap="round"/>
+   ${girl?`<path d="M0 -10 L22 34 H-22 Z" fill="${col}"/>`:`<rect x="-17" y="-10" width="34" height="38" rx="10" fill="${col}"/>`}
+   <path d="M-9 30 v16 M9 30 v16" stroke="#3B2A6E" stroke-width="6" stroke-linecap="round"/></g>`}
+function figSVG(fig,col){const W=(inner,vb)=>`<svg class="fig" viewBox="${vb||'-70 -60 140 120'}" aria-hidden="true">${inner}</svg>`;
+  const arrow=(d,c)=>`<path d="${d}" stroke="${c||'#F5C451'}" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#ah)"/>`;
+  const defs=`<defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#F5C451"/></marker></defs>`;
+  switch(fig){
+   case 'me':return W(defs+person('girl',-10,col)+arrow('M48 -40 q-10 30 -36 32')+'<text x="44" y="-44" fill="#F5C451" font-size="16" font-weight="800">я</text>');
+   case 'you':return W(defs+person('boy',-22,col)+arrow('M0 0 L52 0')+'<text x="40" y="-10" fill="#F5C451" font-size="16" font-weight="800">ты</text>');
+   case 'boy':return W(person('boy',0,col));
+   case 'girl':return W(person('girl',0,col));
+   case 'man':return W(person('man',0,col));
+   case 'woman':return W(person('woman',0,col));
+   case 'it':return `<div class="figit">${chameleon(col)}</div>`;
+   case 'we':return W(`<rect x="-92" y="-62" width="184" height="118" rx="30" fill="none" stroke="#F5C451" stroke-width="3" stroke-dasharray="8 6"/>`+person('girl',-52,'#FF8FCB',.9)+person('boy',0,col,.9)+person('girl',52,'#86B6FF',.9)+'<path d="M-52 -66 l4 8 8 1 -6 6 2 8 -8 -4 -8 4 2 -8 -6 -6 8 -1z" fill="#F5C451"/>','-100 -80 200 140');
+   case 'they':return W(defs+person('boy',-40,col,.85)+person('girl',10,'#5EE3E0',.85)+person('boy',58,'#FF8FCB',.85)+arrow('M-96 -50 q10 20 28 26'),'-100 -80 200 140');
+   case 'cat':return `<div class="figit">${chameleon('#FFB65C')}</div>`;
+   case 'ball':return shape('ball','#FF4D5A');
+   case 'twogirls':return W(person('girl',-28,'#FF8FCB',.9)+person('girl',28,'#C9A2FF',.9),'-80 -70 160 130');
+   case 'boygirl':return W(person('boy',-28,'#5EE3E0',.9)+person('girl',28,'#FF8FCB',.9),'-80 -70 160 130');
+   case 'mumandi':return W(person('woman',-28,'#FFB65C',.9)+person('girl',28,'#F5C451',.9)+'<path d="M28 -62 l4 8 8 1 -6 6 2 8 -8 -4 -8 4 2 -8 -6 -6 8 -1z" fill="#F5C451"/>','-80 -80 160 140');
+  }return ''}
+const REPL=[{t:'Tom',f:'boy',a:'he'},{t:'Anna',f:'girl',a:'she'},{t:'a cat',f:'cat',a:'it'},{t:'a ball',f:'ball',a:'it'},{t:'Tom and Anna',f:'boygirl',a:'they'},{t:'Mum and I',f:'mumandi',a:'we'},{t:'Dad',f:'man',a:'he'},{t:'Mum',f:'woman',a:'she'},{t:'Anna and Kate',f:'twogirls',a:'they'},{t:'Ben',f:'boy',a:'he'},{t:'Kate',f:'girl',a:'she'}];
+function prStatus(w){if(PRI.has(w))return {k:'irr',t:'Слово-исключение: читается не по правилам, запоминаем целиком'};const m=missing(w).filter(n=>NODE[n]);
+  return m.length?{k:'later',t:`Прочитаем по правилам, когда засияет плод: ${m.map(n=>NODE[n].lbl).join(', ')}`}:{k:'read',t:'Можешь прочитать сама: '+(w==='I'?'буква I говорит своё имя':w==='it'?'закрытый слог':'открытый слог — e говорит своё имя «и»')}}
+function pronSlides(){const dress=['#86B6FF','#FFB65C'];
+ return [
+ {id:'pr0',ch:'местоим.',r:el=>{el.classList.add('cover');el.innerHTML=`<div class="parade">${['me','boy','girl','it','we'].map((f,i)=>`<div class="pf" style="animation-delay:${i*.35}s">${figSVG(f,PR[[0,2,3,4,5][i]].col)}</div>`).join('')}</div>
+   <div class="eyebrow">Сундук слов · новая тема</div><h1>Кто есть кто?</h1><p class="lead">Познакомимся с волшебными словами, которые заменяют имена: I, you, he, she, it, we, they.</p>
+   <button class="btn gold" data-go-next style="font-size:20px;padding:14px 30px">Начать</button>
+   ${note(['План ~40 минут: знакомство с 7 местоимениями → палочка «имя → местоимение» → игра «Замени имя» → жесты → пары am/is/are → читаем → проверка.','Если времени мало — am/is/are (слайд 6) перенеси на следующий урок.','Связь с учебником: в English World 1 это встречается как I’m…, He’s…, She’s….'])}`}},
+ {id:'pr1',ch:'местоим.',r:el=>{let cur='I';
+  const draw=()=>{const p=prOf(cur);el.innerHTML=`<div><div class="eyebrow">Знакомимся</div><h2 class="st">Слова-заменители</h2></div>
+   ${narr('Чтобы не повторять имя много раз, англичане используют маленькие слова-заменители — <b>местоимения</b>. Например: <b>Anna</b> is my friend. <b>She</b> is happy. Нажимай на карточки и повторяй вслух!',...dress)}
+   <div class="prstage" style="--pc:${p.col}"><div class="prfig">${figSVG(p.fig,p.col)}</div><div class="prinfo"><span class="prw">${p.w}</span>${sayBtn(p.w)}<span class="prru">${p.ru}</span><span class="prtip">Жест: ${p.tip}</span><span class="prex"><b>${p.ex}</b> ${sayBtn(p.ex)} <span class="muted">${p.exr}</span></span></div></div>
+   <div class="prcards">${PR.map(x=>`<button class="prc ${x.w===cur?'cur':''}" style="--pc:${x.col}" data-pr="${x.w}"><span>${x.w}</span><small>${x.ru.split(':')[0]}</small></button>`).join('')}</div>
+   ${note(['Каждое слово — сразу с жестом. Жест помогает запомнить быстрее, чем перевод.','I всегда пишется с большой буквы, даже в середине предложения — обрати внимание ребёнка.','you = и «ты», и «вы»: в английском одно слово на оба.'])}`;
+   $$('[data-pr]',el).forEach(b=>b.onclick=()=>{cur=b.dataset.pr;draw();say(cur);sparkle(el.querySelector('.prfig'))})};draw()}},
+ {id:'pr2',ch:'местоим.',r:el=>{let k=0,on=false;const list=shuffle(REPL).slice(0,7);
+  const draw=()=>{const it=list[k];const p=prOf(it.a);el.innerHTML=`<div><div class="eyebrow">Волшебная палочка</div><h2 class="st">Имя превращается в местоимение</h2></div>
+   ${narr('Посмотри, кто на картинке. Девочка — значит <b>she</b>, мальчик — <b>he</b>, предмет или зверёк — <b>it</b>, несколько человек — <b>they</b>, а если среди них есть ты — <b>we</b>. Сначала угадай сама, потом взмахни палочкой!',...dress)}
+   <div class="spell"><div class="prpic">${figSVG(it.f,p.col)}</div><div class="morph ${on?'on':''}"><span class="m1">${it.t}</span><span class="m2" style="color:${p.col}">${it.a==='I'?'I':it.a[0].toUpperCase()+it.a.slice(1)}</span></div>
+    <div class="msg">${on?`${it.t} → <b style="color:${p.col}">${it.a}</b> (${p.ru.split(':')[0]})`:'Кем заменим?'}</div>
+    <div class="row center"><button class="btn gold wandbtn" data-w>${on?'Следующая картинка →':'Взмахнуть палочкой'}</button>${on?sayBtn(it.a):''}<span class="muted" style="font-size:14px">${k+1} / ${list.length}</span></div></div>
+   ${note(['Ребёнок сначала говорит вслух свой вариант, потом нажимаешь палочку.'])}`;
+   el.querySelector('[data-w]').onclick=()=>{if(!on){on=true;draw();say(it.a);sparkle(el.querySelector('.morph'))}else{k=(k+1)%list.length;on=false;draw()}}};draw()}},
+ {id:'pr3',ch:'местоим.',r:el=>{el.innerHTML=`<div><div class="eyebrow">Игра</div><h2 class="st">Замени имя</h2></div>
+   ${narr('Посмотри на картинку и слова под ней. Каким местоимением их заменить? Нажми на правильное.',...dress)}<div id="g" class="grow"></div>
+   ${note(['10 раундов. После правильного ответа пусть ребёнок скажет целиком: «Tom — he».'])}`;prGame($('#g',el))}},
+ {id:'pr4',ch:'местоим.',r:el=>{el.innerHTML=`<div><div class="eyebrow">Подвижная игра</div><h2 class="st">Покажи жестом!</h2></div>
+   ${narr('Послушай слово и покажи его жестом: <b>I</b> — на себя, <b>you</b> — в камеру, <b>we</b> — обведи рукой себя и всех вокруг…',...dress)}<div id="tp"></div>
+   ${note(['Сначала ты называешь, ребёнок показывает. Потом наоборот: ты показываешь жест, ребёнок называет слово.'])}`;prTPR($('#tp',el))}},
+ {id:'pr5',ch:'местоим.',r:el=>{el.innerHTML=`<div><div class="eyebrow">Волшебные пары</div><h2 class="st">am · is · are</h2></div>
+   ${narr('У каждого местоимения есть свой друг-глагол «быть»: <b>I am</b>, <b>he is</b>, <b>they are</b>. По-русски мы его не говорим («я счастлива»), а по-английски — обязательно: <b>I am happy</b>.',...dress)}
+   <div class="bepairs"><div class="bep" style="--pc:#F5C451"><b>am</b><span>I</span><small>только с I</small></div><div class="bep" style="--pc:#5EE3E0"><b>is</b><span>he · she · it</span><small>один человек или предмет</small></div><div class="bep" style="--pc:#C9A2FF"><b>are</b><span>you · we · they</span><small>ты/вы и много</small></div></div>
+   <div id="bg"></div>
+   ${note(['Короткие формы для учебника: I’m, he’s, she’s, it’s, we’re, they’re, you’re — можно показать в конце.','Если сложно — этот слайд смело переносим на следующий урок.'])}`;beGame($('#bg',el))}},
+ {id:'pr6',ch:'местоим.',r:el=>{el.innerHTML=`<div><div class="eyebrow">Читаем</div><h2 class="st">Какие слова ты уже можешь прочитать?</h2></div>
+   ${narr('Многие местоимения читаются по нашим правилам: <b>he</b>, <b>we</b> — открытый слог, <b>it</b> — закрытый. А <b>you</b> и <b>they</b> — хулиганы, их запоминаем целиком.',...dress)}
+   <div class="colread">${PR.map(p=>{const st=prStatus(p.w);return `<div class="crow st-${st.k}"><span class="cdot2" style="background:${p.col}"></span><button class="crw" data-say="${p.w}"><span class="pw">${p.w}</span></button><span class="crs">${st.k==='read'?'✓ ':''}${st.t}</span></div>`}).join('')}</div>
+   ${note(['Список подстраивается под дерево ученицы: she станет «можешь прочитать», когда засияет плод sh.'])}`}},
+ checkSlide('pron',()=>shuffle(PR).map(p=>({html:`<span class="chkfig">${figSVG(p.fig,p.col)}</span>`,say:p.w,info:p.w+' · '+p.ru})).concat(shuffle(REPL).slice(0,3).map(r=>({html:`<span class="chkfig">${figSVG(r.f,prOf(r.a).col)}</span><div class="muted" style="font-size:24px">${r.t}</div>`,say:r.a,info:r.t+' → '+r.a}))))
+ ]}
+function prGame(root){const rounds=Array.from({length:10},()=>pick(REPL));let k=0,ok=0;
+  function draw(ans){const it=rounds[k];const p=prOf(it.a);if(!ans)root._o=shuffle([it.a,...shuffle(PR.map(x=>x.w).filter(w=>w!==it.a&&w!=='I'&&w!=='you')).slice(0,3)]);const right=ans===it.a;
+   root.innerHTML=`<div class="quiz"><div class="bar5">${rounds.map((_,i)=>`<i class="${i<k||(i===k&&ans)?'on':''}"></i>`).join('')}</div><div class="prpic">${figSVG(it.f,p.col)}</div><div class="phrase">${it.t}</div>
+    <div class="qopts four">${root._o.map(w=>`<button class="qopt ${ans?(w===it.a?'right':w===ans?'wrong':''):''}" style="--kc:${prOf(w).col}" data-a="${w}" ${ans?'disabled':''}><span class="pw" style="font-size:30px">${w}</span></button>`).join('')}</div>
+    <div class="fb ${ans?(right?'ok':'bad'):''}">${ans?(right?`Верно! ${it.t} → <b>${it.a}</b>.`:`${it.t} → <b>${it.a}</b> (${p.ru.split(':')[0]}).`):''}</div>
+    <div class="row center">${ans?`<button class="btn gold" data-nx>${k<rounds.length-1?'Дальше →':'Ещё раз'}</button>`:''}<span class="score">Верно: <b>${ok}</b></span></div></div>`;
+   $$('[data-a]',root).forEach(b=>b.onclick=()=>{if(b.dataset.a===it.a){ok++;confetti(...center(b),30)}say(it.a);draw(b.dataset.a)});
+   const nx=root.querySelector('[data-nx]');if(nx)nx.onclick=()=>{if(k<rounds.length-1){k++;draw()}else prGame(root)}}
+  draw()}
+function prTPR(root){let p=null,shown=false;
+  function next(){p=pick(PR.filter(x=>!p||x!==p));shown=false;draw();say(p.w)}
+  function draw(){root.innerHTML=`<div class="hunt"><div class="hsplash" style="--hc:${p.col}"><span class="hleft" style="font-family:var(--word);font-size:64px">${p.w}</span></div>
+    <div class="info" style="font-size:20px;font-weight:700">${shown?`Жест: ${p.tip}`:'Покажи жестом!'}</div>
+    <div class="row center">${sayBtn(p.w)}<button class="btn" data-sh>${shown?'Спрятать':'Подсказка'}</button><button class="btn gold" data-nx>Следующее слово →</button></div></div>`;
+   root.querySelector('[data-sh]').onclick=()=>{shown=!shown;draw()};root.querySelector('[data-nx]').onclick=next}
+  next()}
+function beGame(root){const rounds=shuffle([...PR,...shuffle(PR).slice(0,3)]);let k=0,ok=0;
+  function draw(ans){const p=rounds[k];const right=ans===p.be;
+   root.innerHTML=`<div class="quiz"><div class="bar5">${rounds.map((_,i)=>`<i class="${i<k||(i===k&&ans)?'on':''}"></i>`).join('')}</div>
+    <div class="phrase"><span style="color:${p.col}">${p.w==='I'?'I':p.w[0].toUpperCase()+p.w.slice(1)}</span> <span class="beslot ${ans?'full':''}">${ans?p.be:'…'}</span> happy.</div>
+    <div class="qopts">${['am','is','are'].map(b=>`<button class="qopt ${ans?(b===p.be?'right':b===ans?'wrong':''):''}" style="--kc:${b==='am'?'#F5C451':b==='is'?'#5EE3E0':'#C9A2FF'}" data-b="${b}" ${ans?'disabled':''}><span class="pw" style="font-size:30px">${b}</span></button>`).join('')}</div>
+    <div class="fb ${ans?(right?'ok':'bad'):''}">${ans?(right?'Верно! ':'Запомни: ')+`<b>${p.w} ${p.be}</b>`+(p.be==='am'?' — am дружит только с I.':p.be==='is'?' — один человек или предмет.':' — ты/вы или много.'):''}</div>
+    <div class="row center">${ans?`${sayBtn(`${p.w} ${p.be} happy`)}<button class="btn gold" data-nx>${k<rounds.length-1?'Дальше →':'Ещё раз'}</button>`:''}<span class="score">Верно: <b>${ok}</b></span></div></div>`;
+   $$('[data-b]',root).forEach(b=>b.onclick=()=>{if(b.dataset.b===p.be){ok++;confetti(...center(b),30)}say(`${p.w} ${p.be} happy`);draw(b.dataset.b)});
+   const nx=root.querySelector('[data-nx]');if(nx)nx.onclick=()=>{if(k<rounds.length-1){k++;draw()}else beGame(root)}}
+  draw()}
 
 renderHub();initDb();
 })();
